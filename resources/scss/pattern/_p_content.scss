@@ -1,51 +1,160 @@
 // 사이트 컨텐츠 내용
+:root {
+  --swiper-theme-color: #ed1b2c;
+}
 
-.slide-intro {
-  .swiper-slide {
-    position: relative;
-    &.swiper-slide-active {
-      .text-area {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-      }
+.slide {
+  position: relative;
+  height: 784px;
+  .swiper-button-play-pause {
+    position: absolute;
+    bottom: 3.8%;
+    left: 54%;
+    z-index: 9999;
+    &.default::before {
+      display: block;
+      content: "\f04c";
+      width: 20px;
+      height: 20px;
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+      color: $white;
     }
-
-    img {
-      object-position: 50% 100%;
+    &.clicked::before {
+      content: "\f04b";
+      display: block;
+      width: 20px;
+      height: 20px;
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+      color: $white;
     }
-    .text-area {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, 0);
-      width: 70%;
-      max-width: 400px;
-      opacity: 0;
-      transition: all 0.5s;
-      // .text-area__tit
-      &__tit {
-        font-size: 3rem;
-        color: $gray-90;
-        font-family: "GmarketSansMedium";
-        font-weight: $font-medium;
-      }
-      &__cont {
-        color: $gray-70;
-      }
-      &__goto {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 7px 20px;
-        background: $primary;
-        color: $white;
-      }
-    }
-    img {
-      height: 50vh;
+    span {
+      @include sr-only;
     }
   }
-  .swiper-pagination {
-    display: none;
+  .slide-intro {
+    .swiper-slide {
+      position: relative;
+      &.swiper-slide-active {
+        .text-area {
+          opacity: 1;
+          transform: translate(-50%, -50%);
+        }
+      }
+      picture {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 626px;
+      }
+      .text-area {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        max-width: 400px;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.5s;
+        &__tit {
+          position: absolute;
+          top: 15.7%;
+          left: 20px;
+          display: block;
+          font-size: 34px;
+          color: $gray-80;
+          font-weight: 700;
+          text-align: left;
+          line-height: 1.2;
+          letter-spacing: -0.07em;
+        }
+        &__bottom {
+          position: absolute;
+          bottom: 12%;
+          left: 20px;
+          text-align: left;
+          &__cont {
+            font-size: 20px;
+            color: $white;
+          }
+          &__goto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 105px;
+            height: 32px;
+            border-radius: 30px;
+            border: 1px solid $white;
+            color: $white;
+            font-size: 14px;
+            letter-spacing: -0.05em;
+            margin-top: 10px;
+            &::after {
+              display: block;
+              content: "";
+              width: 8px;
+              height: 8px;
+              margin-left: 10px;
+              background: url(../../../resources/images/pattern/common/r-arrow.svg) no-repeat center/contain;
+            }
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+      display: flex;
+      width: 50%;
+      bottom: 5%;
+      left: $p-mobile;
+      .swiper-pagination-bullet {
+        background-color: $white;
+        margin: 0 20px 0 0;
+        width: 5px;
+        height: 5px;
+        &-active {
+          // bullet이 활성화된 경우
+        }
+      }
+    }
+    .autoplay-progress {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 10;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .autoplay-progress svg {
+      --progress: 0;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      stroke-width: 4px;
+      stroke: $white;
+      fill: none;
+      stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
+    }
+  }
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 1); /* 원의 색상 */
+    width: 0; /* 초기 너비 */
+    height: 0; /* 초기 높이 */
+    transition: width 0.2s, height 0.2s; /* 크기 변화에 대한 부드러운 애니메이션 */
+    pointer-events: none; /* 마우스 이벤트 방지 */
   }
 }
 
@@ -88,18 +197,111 @@
   }
 }
 
-.slide-studio {
-  overflow: visible;
-  width: 80%;
-  margin-left: 0;
-  @include mobileMore {
-    width: 90%;
+// .slide-studio {
+//   overflow: visible;
+//   width: 80%;
+//   margin-left: 0;
+//   @include mobileMore {
+//     width: 90%;
+//   }
+//   @include tabletMore {
+//     width: 100%;
+//     margin-left: auto;
+//   }
+//   .swiper-pagination {
+//     bottom: -50px;
+//   }
+// }
+
+.slide-best-info {
+  .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
   }
-  @include tabletMore {
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
     width: 100%;
-    margin-left: auto;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
   }
-  .swiper-pagination {
-    bottom: -50px;
+}
+
+.slide-new {
+  .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+  }
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+}
+
+.slide-branding {
+  .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+  }
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
   }
 }

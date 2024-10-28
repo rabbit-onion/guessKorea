@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KRDS themplate</title>
+    <title>GUESS 공식 온라인 스토어</title>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="페이지 제목" />
     <meta property="og:description" content="페이지 설명" />
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../resources/css/styles.css" />
+    <link rel="stylesheet" href="../resources/css/patten_css.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="../resources/js/include.js"></script>
@@ -35,7 +35,7 @@
         <div class="inner">
           <h1 id="logo">
             <a href="#">
-              <span>우리자산운용</span>
+              <span>GUESS</span>
             </a>
           </h1>
           <nav id="gnb" class="gnb">
@@ -146,6 +146,7 @@
         </nav>
       </header>
       <div class="slide">
+        <button class="swiper-button-play-pause default" aria-label="슬라이드 쇼 제어"><span>정지</span></button>
         <!-- Slider main container -->
         <div class="swiper slide-intro">
           <!-- Additional required wrapper -->
@@ -154,16 +155,25 @@
             <div class="swiper-slide">
               <a href="#">
                 <picture>
-                  <source srcset="https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1024px)" />
-                  <source srcset="https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 600px)" />
-                  <source srcset="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                  <img src="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flowers" />
+                  <source srcset="" media="(min-width: 1024px)" />
+                  <source srcset="" media="(min-width: 600px)" />
+                  <source srcset="" />
+                  <img src="../resources/images/pattern/common/intor1-mobile.jpg" alt="" />
                 </picture>
                 <div class="text-area">
                   <div class="inner">
-                    <strong class="text-area__tit">슬라이드 제목</strong>
-                    <p class="text-area__cont">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                    <div class="text-area__tit">
+                      <div class="split">
+                        <strong>베이직 푸퍼</strong>
+                      </div>
+                      <div class="split">
+                        <strong>온라인 단독 선 오픈</strong>
+                      </div>
+                    </div>
+                    <div class="text-area__bottom">
+                      <p class="text-area__bottom__cont">ONLINE EXCLUSIVE 10% OFF</p>
+                      <span class="text-area__bottom__goto text-area__bottom__goto--hidden">자세히 보기</span>
+                    </div>
                   </div>
                 </div>
               </a>
@@ -171,16 +181,25 @@
             <div class="swiper-slide">
               <a href="#">
                 <picture>
-                  <source srcset="https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1024px)" />
-                  <source srcset="https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 600px)" />
-                  <source srcset="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                  <img src="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flowers" />
+                  <source srcset="" media="(min-width: 1024px)" />
+                  <source srcset="" media="(min-width: 600px)" />
+                  <source srcset="" />
+                  <img src="../resources/images/pattern/common/intor1-mobile.jpg" alt="" />
                 </picture>
                 <div class="text-area">
                   <div class="inner">
-                    <strong class="text-area__tit">슬라이드 제목</strong>
-                    <p class="text-area__cont">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                    <div class="text-area__tit">
+                      <div class="split">
+                        <strong>베이직 푸퍼</strong>
+                      </div>
+                      <div class="split">
+                        <strong>온라인 단독 선 오픈</strong>
+                      </div>
+                    </div>
+                    <div class="text-area__bottom">
+                      <p class="text-area__bottom__cont">ONLINE EXCLUSIVE 10% OFF</p>
+                      <span class="text-area__bottom__goto text-area__bottom__goto--hidden">자세히 보기</span>
+                    </div>
                   </div>
                 </div>
               </a>
@@ -188,16 +207,25 @@
             <div class="swiper-slide">
               <a href="#">
                 <picture>
-                  <source srcset="https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1024px)" />
-                  <source srcset="https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 600px)" />
-                  <source srcset="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                  <img src="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flowers" />
+                  <source srcset="" media="(min-width: 1024px)" />
+                  <source srcset="" media="(min-width: 600px)" />
+                  <source srcset="" />
+                  <img src="../resources/images/pattern/common/intor1-mobile.jpg" alt="" />
                 </picture>
                 <div class="text-area">
                   <div class="inner">
-                    <strong class="text-area__tit">슬라이드 제목</strong>
-                    <p class="text-area__cont">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                    <div class="text-area__tit">
+                      <div class="split">
+                        <strong>베이직 푸퍼</strong>
+                      </div>
+                      <div class="split">
+                        <strong>온라인 단독 선 오픈</strong>
+                      </div>
+                    </div>
+                    <div class="text-area__bottom">
+                      <p class="text-area__bottom__cont">ONLINE EXCLUSIVE 10% OFF</p>
+                      <span class="text-area__bottom__goto text-area__bottom__goto--hidden">자세히 보기</span>
+                    </div>
                   </div>
                 </div>
               </a>
@@ -205,16 +233,25 @@
             <div class="swiper-slide">
               <a href="#">
                 <picture>
-                  <source srcset="https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1024px)" />
-                  <source srcset="https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 600px)" />
-                  <source srcset="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                  <img src="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flowers" />
+                  <source srcset="" media="(min-width: 1024px)" />
+                  <source srcset="" media="(min-width: 600px)" />
+                  <source srcset="" />
+                  <img src="../resources/images/pattern/common/intor1-mobile.jpg" alt="" />
                 </picture>
                 <div class="text-area">
                   <div class="inner">
-                    <strong class="text-area__tit">슬라이드 제목</strong>
-                    <p class="text-area__cont">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                    <div class="text-area__tit">
+                      <div class="split">
+                        <strong>베이직 푸퍼</strong>
+                      </div>
+                      <div class="split">
+                        <strong>온라인 단독 선 오픈</strong>
+                      </div>
+                    </div>
+                    <div class="text-area__bottom">
+                      <p class="text-area__bottom__cont">ONLINE EXCLUSIVE 10% OFF</p>
+                      <span class="text-area__bottom__goto text-area__bottom__goto--hidden">자세히 보기</span>
+                    </div>
                   </div>
                 </div>
               </a>
@@ -222,16 +259,103 @@
             <div class="swiper-slide">
               <a href="#">
                 <picture>
-                  <source srcset="https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 1024px)" />
-                  <source srcset="https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" media="(min-width: 600px)" />
-                  <source srcset="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                  <img src="https://images.unsplash.com/photo-1516139008210-96e45dccd83b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flowers" />
+                  <source srcset="" media="(min-width: 1024px)" />
+                  <source srcset="" media="(min-width: 600px)" />
+                  <source srcset="" />
+                  <img src="../resources/images/pattern/common/intor1-mobile.jpg" alt="" />
                 </picture>
                 <div class="text-area">
                   <div class="inner">
-                    <strong class="text-area__tit">슬라이드 제목</strong>
-                    <p class="text-area__cont">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <span class="text-area__goto text-area__goto--hidden">바로가기</span>
+                    <div class="text-area__tit">
+                      <div class="split">
+                        <strong>베이직 푸퍼</strong>
+                      </div>
+                      <div class="split">
+                        <strong>온라인 단독 선 오픈</strong>
+                      </div>
+                    </div>
+                    <div class="text-area__bottom">
+                      <p class="text-area__bottom__cont">ONLINE EXCLUSIVE 10% OFF</p>
+                      <span class="text-area__bottom__goto text-area__bottom__goto--hidden">자세히 보기</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <picture>
+                  <source srcset="" media="(min-width: 1024px)" />
+                  <source srcset="" media="(min-width: 600px)" />
+                  <source srcset="" />
+                  <img src="../resources/images/pattern/common/intor1-mobile.jpg" alt="" />
+                </picture>
+                <div class="text-area">
+                  <div class="inner">
+                    <div class="text-area__tit">
+                      <div class="split">
+                        <strong>베이직 푸퍼</strong>
+                      </div>
+                      <div class="split">
+                        <strong>온라인 단독 선 오픈</strong>
+                      </div>
+                    </div>
+                    <div class="text-area__bottom">
+                      <p class="text-area__bottom__cont">ONLINE EXCLUSIVE 10% OFF</p>
+                      <span class="text-area__bottom__goto text-area__bottom__goto--hidden">자세히 보기</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <picture>
+                  <source srcset="" media="(min-width: 1024px)" />
+                  <source srcset="" media="(min-width: 600px)" />
+                  <source srcset="" />
+                  <img src="../resources/images/pattern/common/intor1-mobile.jpg" alt="" />
+                </picture>
+                <div class="text-area">
+                  <div class="inner">
+                    <div class="text-area__tit">
+                      <div class="split">
+                        <strong>베이직 푸퍼</strong>
+                      </div>
+                      <div class="split">
+                        <strong>온라인 단독 선 오픈</strong>
+                      </div>
+                    </div>
+                    <div class="text-area__bottom">
+                      <p class="text-area__bottom__cont">ONLINE EXCLUSIVE 10% OFF</p>
+                      <span class="text-area__bottom__goto text-area__bottom__goto--hidden">자세히 보기</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <picture>
+                  <source srcset="" media="(min-width: 1024px)" />
+                  <source srcset="" media="(min-width: 600px)" />
+                  <source srcset="" />
+                  <img src="../resources/images/pattern/common/intor1-mobile.jpg" alt="" />
+                </picture>
+                <div class="text-area">
+                  <div class="inner">
+                    <div class="text-area__tit">
+                      <div class="split">
+                        <strong>베이직 푸퍼</strong>
+                      </div>
+                      <div class="split">
+                        <strong>온라인 단독 선 오픈</strong>
+                      </div>
+                    </div>
+                    <div class="text-area__bottom">
+                      <p class="text-area__bottom__cont">ONLINE EXCLUSIVE 10% OFF</p>
+                      <span class="text-area__bottom__goto text-area__bottom__goto--hidden">자세히 보기</span>
+                    </div>
                   </div>
                 </div>
               </a>
@@ -239,69 +363,62 @@
           </div>
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="autoplay-progress">
+            <svg viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+          </div>
         </div>
+        <div class="circle"></div>
       </div>
       <main id="container">
-        <!-- 스튜디오 섹션 -->
-        <section class="sec-g sec-studio">
+        <!-- best seller 섹션 -->
+        <section class="sec-g sec-best">
           <div class="inner">
-            <h2 class="sec-g__tit">섹션 타이틀</h2>
+            <div class="sec-g__tit">
+              <a href="#">
+                <h2>BEST SELLER</h2>
+              </a>
+            </div>
             <div class="sec-g__cont">
-              <div class="swiper slide-studio">
+              <div class="swiper slide-best-img">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <a href="#">
                       <img src="https://www.wooriam.kr/upload/public/board/LnMCTNmG6JaCGQHJ/tb5eAihFnIe9tAmJ.jpg" alt="" />
-                      <strong>미국 공모주 정말 쉽게 받는 방법</strong>
-                      <em>2024.10.16</em>
+                      <div class="best-img-txt-box">
+                        <span class="best-num">BEST 01</span>
+                        <span class="best-name">women crop puffer brown</span>
+                        <!-- after로 아래 라인 -->
+                      </div>
                     </a>
                   </div>
+                </div>
+              </div>
+              <div class="swiper slide-best-info">
+                <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <a href="#">
+                      <div class="best-info-txt-box">
+                        <div class="best-info-tit">
+                          [Featherlight]
+                          <br />
+                          여성 CROP 푸퍼_BROWN
+                        </div>
+                        <div class="best-info-price-origin">138,000</div>
+                        <div class="best-info-price">124,200</div>
+                      </div>
                       <img src="https://www.wooriam.kr/upload/public/board/LnMCTNmG6JaCGQHJ/tb5eAihFnIe9tAmJ.jpg" alt="" />
-                      <strong>미국 공모주 정말 쉽게 받는 방법</strong>
-                      <em>2024.10.16</em>
                     </a>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://www.wooriam.kr/upload/public/board/LnMCTNmG6JaCGQHJ/tb5eAihFnIe9tAmJ.jpg" alt="" />
-                      <strong>미국 공모주 정말 쉽게 받는 방법</strong>
-                      <em>2024.10.16</em>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://www.wooriam.kr/upload/public/board/LnMCTNmG6JaCGQHJ/tb5eAihFnIe9tAmJ.jpg" alt="" />
-                      <strong>미국 공모주 정말 쉽게 받는 방법</strong>
-                      <em>2024.10.16</em>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://www.wooriam.kr/upload/public/board/LnMCTNmG6JaCGQHJ/tb5eAihFnIe9tAmJ.jpg" alt="" />
-                      <strong>미국 공모주 정말 쉽게 받는 방법</strong>
-                      <em>2024.10.16</em>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://www.wooriam.kr/upload/public/board/LnMCTNmG6JaCGQHJ/tb5eAihFnIe9tAmJ.jpg" alt="" />
-                      <strong>미국 공모주 정말 쉽게 받는 방법</strong>
-                      <em>2024.10.16</em>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#">
-                      <img src="https://www.wooriam.kr/upload/public/board/LnMCTNmG6JaCGQHJ/tb5eAihFnIe9tAmJ.jpg" alt="" />
-                      <strong>미국 공모주 정말 쉽게 받는 방법</strong>
-                      <em>2024.10.16</em>
-                    </a>
-                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                  <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                  </svg>
+                  <span></span>
                 </div>
               </div>
             </div>
@@ -309,29 +426,88 @@
           </div>
         </section>
 
-        <!-- ㄴㅠㅅㅡㅅㅔㄱㅅㅕㄴ -->
-        <section class="sec-g sec-news bg-gray">
+        <!-- new arrivals 섹션 -->
+        <section class="sec-g sec-new bg-gray">
           <div class="inner">
-            <h2 class="sec-g__tit">섹션 타이틀</h2>
-            <div class="sec-g__cont">컨텐츠</div>
+            <div class="sec-g__tit">
+              <a href="#">
+                <h2>NEW ARRIVALS</h2>
+              </a>
+            </div>
+            <div class="sec-g__cont">
+              <div class="swiper slide-new">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                  <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                  </svg>
+                  <span></span>
+                </div>
+              </div>
+            </div>
             <a href="#" class="sec-g__more">더보기</a>
           </div>
         </section>
 
-        <!-- ㄴㅠㅅㅡㅅㅔㄱㅅㅕㄴ -->
-        <section class="sec-g sec-news">
+        <!-- lookbook 섹션 -->
+        <section class="sec-g sec-look bg-gray">
           <div class="inner">
-            <h2 class="sec-g__tit">섹션 타이틀</h2>
-            <div class="sec-g__cont">컨텐츠</div>
+            <div class="sec-g__tit">
+              <a href="#">
+                <h2>LOOKBOOK</h2>
+              </a>
+            </div>
+            <div class="sec-g__cont">
+              <div class="look"><a href="#">look1</a></div>
+              <div class="look"><a href="#">look2</a></div>
+              <div class="look"><a href="#">look3</a></div>
+              <div class="look"><a href="#">look4</a></div>
+            </div>
             <a href="#" class="sec-g__more">더보기</a>
           </div>
         </section>
 
-        <!-- ㄴㅠㅅㅡㅅㅔㄱㅅㅕㄴ -->
-        <section class="sec-g sec-news bg-gray">
+        <!-- branding 섹션 -->
+        <section class="sec-g sec-branding">
           <div class="inner">
-            <h2 class="sec-g__tit">섹션 타이틀</h2>
-            <div class="sec-g__cont">컨텐츠</div>
+            <div class="sec-g__tit">
+              <a href="#">
+                <h2>BRANDING</h2>
+              </a>
+            </div>
+            <div class="sec-g__cont">
+              <div class="swiper slide-branding">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                  <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                  </svg>
+                  <span></span>
+                </div>
+              </div>
+            </div>
             <a href="#" class="sec-g__more">더보기</a>
           </div>
         </section>
