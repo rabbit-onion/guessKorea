@@ -1,12 +1,38 @@
-const progressCircle = document.querySelector(".autoplay-progress svg");
-const progressContent = document.querySelector(".autoplay-progress span");
-var swiperIntro = new Swiper(".slide-intro", {
+const swiperIntro = new Swiper(".slide-intro", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  on: {},
+});
+
+const swiperBestImg = new Swiper(".slide-best-img", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  on: {},
+});
+
+const swiperBestInfo = new Swiper(".slide-best-info", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
