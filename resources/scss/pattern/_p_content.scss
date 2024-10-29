@@ -453,6 +453,33 @@
     width: 390px;
     height: 760px;
     margin-left: -$p-mobile;
+    .swiper-button-play-pause {
+      position: absolute;
+      bottom: 45px;
+      left: 88%;
+      z-index: 9999;
+      &.default::before {
+        display: block;
+        content: "\f04c";
+        width: 20px;
+        height: 20px;
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+        color: $white;
+      }
+      &.clicked::before {
+        content: "\f04b";
+        display: block;
+        width: 20px;
+        height: 20px;
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+        color: $white;
+      }
+      span {
+        @include sr-only;
+      }
+    }
   }
   .overlay {
     position: absolute;
@@ -472,35 +499,44 @@
     font-weight: 600;
     line-height: 1.15;
   }
-}
-
-.slide-branding {
-  .autoplay-progress {
+  .swiper-pagination {
     position: absolute;
-    right: 16px;
-    bottom: 16px;
-    z-index: 10;
-    width: 48px;
-    height: 48px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: var(--swiper-theme-color);
-  }
-  .autoplay-progress svg {
-    --progress: 0;
-    position: absolute;
-    left: 0;
-    top: 0px;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    stroke-width: 4px;
-    stroke: var(--swiper-theme-color);
-    fill: none;
-    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-    stroke-dasharray: 125.6;
-    transform: rotate(-90deg);
+    bottom: 55px;
+    left: 20px;
+    width: fit-content;
+    .swiper-pagination-bullet {
+      background-color: $white;
+      margin: 0 20px 0 0;
+      width: 17px;
+      height: 3px;
+      border-radius: 0;
+      font-size: 13px;
+      font-weight: $font-light;
+      text-align: left;
+      &::after {
+        padding-top: 5px;
+        display: block;
+        content: "";
+        color: $white;
+      }
+      &:first-child::after {
+        content: "01 BRAND";
+      }
+      &:nth-child(2)::after {
+        content: "02";
+      }
+      &:nth-child(3)::after {
+        content: "03";
+      }
+      &:nth-child(4)::after {
+        content: "04";
+      }
+
+      &-active {
+        // bullet이 활성화된 경우
+        width: 191px;
+      }
+    }
   }
 }

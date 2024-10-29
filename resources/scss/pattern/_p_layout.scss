@@ -308,3 +308,18 @@
     left: 0;
   }
 }
+
+#footer {
+  height: 55px;
+  padding: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  button {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    text-align: left;
+    span {
+      font-weight: $font-bolder;
+    }
+  }
+}

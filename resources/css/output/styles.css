@@ -644,6 +644,21 @@ legend {
   left: 0;
 }
 
+#footer {
+  height: 55px;
+  padding: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+#footer button {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  text-align: left;
+}
+#footer button span {
+  font-weight: 800;
+}
+
 :root {
   --swiper-theme-color: #ed1b2c;
 }
@@ -1076,6 +1091,41 @@ legend {
   height: 760px;
   margin-left: -20px;
 }
+.sec-branding .sec-g__cont .swiper-button-play-pause {
+  position: absolute;
+  bottom: 45px;
+  left: 88%;
+  z-index: 9999;
+}
+.sec-branding .sec-g__cont .swiper-button-play-pause.default::before {
+  display: block;
+  content: "\f04c";
+  width: 20px;
+  height: 20px;
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  color: #fff;
+}
+.sec-branding .sec-g__cont .swiper-button-play-pause.clicked::before {
+  content: "\f04b";
+  display: block;
+  width: 20px;
+  height: 20px;
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  color: #fff;
+}
+.sec-branding .sec-g__cont .swiper-button-play-pause span {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
 .sec-branding .overlay {
   position: absolute;
   top: 0;
@@ -1094,32 +1144,42 @@ legend {
   font-weight: 600;
   line-height: 1.15;
 }
-
-.slide-branding .autoplay-progress {
+.sec-branding .swiper-pagination {
   position: absolute;
-  right: 16px;
-  bottom: 16px;
-  z-index: 10;
-  width: 48px;
-  height: 48px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: var(--swiper-theme-color);
+  bottom: 55px;
+  left: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-.slide-branding .autoplay-progress svg {
-  --progress: 0;
-  position: absolute;
-  left: 0;
-  top: 0px;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  stroke-width: 4px;
-  stroke: var(--swiper-theme-color);
-  fill: none;
-  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-  stroke-dasharray: 125.6;
-  transform: rotate(-90deg);
+.sec-branding .swiper-pagination .swiper-pagination-bullet {
+  background-color: #fff;
+  margin: 0 20px 0 0;
+  width: 17px;
+  height: 3px;
+  border-radius: 0;
+  font-size: 13px;
+  font-weight: 300;
+  text-align: left;
+}
+.sec-branding .swiper-pagination .swiper-pagination-bullet::after {
+  padding-top: 5px;
+  display: block;
+  content: "";
+  color: #fff;
+}
+.sec-branding .swiper-pagination .swiper-pagination-bullet:first-child::after {
+  content: "01 BRAND";
+}
+.sec-branding .swiper-pagination .swiper-pagination-bullet:nth-child(2)::after {
+  content: "02";
+}
+.sec-branding .swiper-pagination .swiper-pagination-bullet:nth-child(3)::after {
+  content: "03";
+}
+.sec-branding .swiper-pagination .swiper-pagination-bullet:nth-child(4)::after {
+  content: "04";
+}
+.sec-branding .swiper-pagination .swiper-pagination-bullet-active {
+  width: 191px;
 }/*# sourceMappingURL=styles.css.map */
