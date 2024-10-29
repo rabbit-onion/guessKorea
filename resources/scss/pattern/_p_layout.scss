@@ -1,7 +1,4 @@
 // 사이트 레이아웃 관련 요소
-.bg-gray {
-  background-color: $gray-5;
-}
 
 // grid layout
 .inner {
@@ -89,6 +86,7 @@
 #header {
   position: relative;
   z-index: 1000;
+  border-bottom: 1px solid #ddd;
   &.active {
     &::before {
       height: 218px;
