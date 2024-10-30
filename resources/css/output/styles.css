@@ -284,6 +284,19 @@ legend {
   width: 100%;
   height: 100%;
 }
+.swiper.overlay .swiper-slide {
+  position: relative;
+}
+.swiper.overlay .swiper-slide a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7));
+}
 .swiper .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -653,11 +666,11 @@ legend {
 #footer {
   height: 55px;
   padding: 20px;
-  font-family: "Noto Sans KR", sans-serif;
 }
 #footer button {
   display: flex;
   align-items: center;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 13px;
   text-align: left;
 }
@@ -671,6 +684,7 @@ legend {
 
 .slide {
   position: relative;
+  top: 60px;
   height: 784px;
 }
 .slide .swiper-button-play-pause {
@@ -720,7 +734,7 @@ legend {
   left: 0;
   right: 0;
   display: block;
-  height: 626px;
+  height: 616px;
 }
 .slide .slide-intro .swiper-slide .text-area {
   position: absolute;
@@ -735,7 +749,7 @@ legend {
 }
 .slide .slide-intro .swiper-slide .text-area__tit {
   position: absolute;
-  top: 14.5%;
+  top: 15.7%;
   left: 20px;
   display: block;
   font-size: 34px;
@@ -743,7 +757,7 @@ legend {
   font-weight: 700;
   text-align: left;
   line-height: 1.2;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.08em;
 }
 .slide .slide-intro .swiper-slide .text-area__bottom {
   position: absolute;
@@ -754,7 +768,7 @@ legend {
 .slide .slide-intro .swiper-slide .text-area__bottom__cont {
   font-size: 20px;
   line-height: 1.4;
-  color: #fff;
+  letter-spacing: -0.025em;
 }
 .slide .slide-intro .swiper-slide .text-area__bottom__goto {
   display: flex;
@@ -763,8 +777,8 @@ legend {
   width: 105px;
   height: 32px;
   border-radius: 30px;
-  border: 1px solid #fff;
-  color: #fff;
+  border-width: 1px;
+  border-style: solid;
   font-size: 14px;
   letter-spacing: -0.05em;
   margin-top: 14px;
@@ -777,14 +791,22 @@ legend {
   margin-left: 10px;
   background: url(../../../resources/images/pattern/common/r-arrow.svg) no-repeat center/contain;
 }
+.slide .slide-intro .intro1 .text-area,
+.slide .slide-intro .intro3 .text-area,
+.slide .slide-intro .intro5 .text-area,
+.slide .slide-intro .intro6 .text-area,
+.slide .slide-intro .intro7 .text-area {
+  color: #fff;
+}
+.slide .slide-intro .intro1 .text-area__bottom__goto,
+.slide .slide-intro .intro3 .text-area__bottom__goto,
+.slide .slide-intro .intro5 .text-area__bottom__goto,
+.slide .slide-intro .intro6 .text-area__bottom__goto,
+.slide .slide-intro .intro7 .text-area__bottom__goto {
+  border-color: #fff;
+}
 .slide .slide-intro .intro2 picture {
   background-color: #ffedd6;
-}
-.slide .slide-intro .intro2 img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  scale: 0.6;
-  margin-left: 30px;
 }
 .slide .slide-intro .swiper-pagination {
   display: flex;
@@ -847,10 +869,14 @@ legend {
   width: 390px;
   height: 422px;
 }
-.sec-best .overlay {
+.sec-best .slide-best-img .swiper-slide {
+  position: relative;
+}
+.sec-best .slide-best-img .swiper-slide a::before {
   position: absolute;
   top: 0;
   left: 0;
+  content: "";
   right: 0;
   width: 100%;
   height: 100%;
@@ -976,12 +1002,12 @@ legend {
   white-space: nowrap !important;
   border: 0 !important;
 }
-.sec-new .sec-g__cont .swiper-slide img {
-  width: 240px;
-  height: 310px;
+.sec-new .sec-g__cont .new-overlay .swiper-slide {
+  position: relative;
 }
-.sec-new .sec-g__cont .swiper-slide .overlay {
+.sec-new .sec-g__cont .new-overlay .swiper-slide a::before {
   position: absolute;
+  content: "";
   top: 0;
   left: 0;
   right: 0;
@@ -989,51 +1015,52 @@ legend {
   height: 310px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgb(255, 255, 255));
 }
-.sec-new .sec-g__cont .swiper-slide .new-txt {
+.sec-new .sec-g__cont .new-overlay .swiper-slide img {
+  width: 240px;
+  height: 310px;
+}
+.sec-new .sec-g__cont .new-overlay .swiper-slide .new-txt {
   padding: 0 5px;
   width: 240px;
   line-height: 1.11;
 }
-.sec-new .sec-g__cont .swiper-slide .new-txt .item-tit {
+.sec-new .sec-g__cont .new-overlay .swiper-slide .new-txt .item-tit {
   text-align: left;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 6px;
 }
-.sec-new .sec-g__cont .swiper-slide .new-txt .item-en-tit {
+.sec-new .sec-g__cont .new-overlay .swiper-slide .new-txt .item-en-tit {
   text-align: left;
   font-size: 14px;
   font-weight: 300;
   margin-bottom: 13px;
 }
-.sec-new .sec-g__cont .swiper-slide .new-txt .item-tag {
+.sec-new .sec-g__cont .new-overlay .swiper-slide .new-txt .item-tag {
   display: flex;
   font-size: 12px;
 }
-.sec-new .sec-g__cont .swiper-slide .new-txt .item-tag div {
+.sec-new .sec-g__cont .new-overlay .swiper-slide .new-txt .item-tag ul {
   display: flex;
   align-items: center;
+}
+.sec-new .sec-g__cont .new-overlay .swiper-slide .new-txt .item-tag ul li {
   height: 24px;
-  border-radius: 20px;
-  padding: 6px;
+  border-radius: 12px;
+  padding: 4px 6px;
   margin-right: 5px;
   background-color: #fceaea;
   color: #ed1b2c;
 }
-.sec-new .sec-g__cont .swiper-slide:nth-child(2n) img {
+.sec-new .sec-g__cont .new-overlay .swiper-slide:nth-child(2n) a::before {
   width: 300px;
   height: 220px;
 }
-.sec-new .sec-g__cont .swiper-slide:nth-child(2n) .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+.sec-new .sec-g__cont .new-overlay .swiper-slide:nth-child(2n) img {
   width: 300px;
   height: 220px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgb(255, 255, 255));
 }
-.sec-new .sec-g__cont .swiper-slide:nth-child(2n) .new-txt {
+.sec-new .sec-g__cont .new-overlay .swiper-slide:nth-child(2n) .new-txt {
   width: 300px;
 }
 .sec-new .swiper-pagination {
@@ -1062,23 +1089,19 @@ legend {
   flex-direction: column;
   gap: 18px;
 }
-.sec-look .sec-g__cont .look {
-  width: 353px;
+.sec-look .sec-g__cont a {
+  display: block;
+  width: 350px;
   height: 405px;
+}
+.sec-look .sec-g__cont a img {
+  width: 100%;
+  height: 100%;
   border-radius: 34px;
-  background-color: lightblue;
-}
-.sec-look .sec-g__cont .look1 {
-  background: url(../../../resources/images/pattern/common/look1.jpg) center 0/cover;
-}
-.sec-look .sec-g__cont .look2 {
-  background: url(../../../resources/images/pattern/common/look2.jpg) center 0/cover;
-}
-.sec-look .sec-g__cont .look3 {
-  background: url(../../../resources/images/pattern/common/look3.jpg) center 0/cover;
-}
-.sec-look .sec-g__cont .look4 {
-  background: url(../../../resources/images/pattern/common/look4.jpg) center 0/cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 0;
+     object-position: center 0;
 }
 
 .sec-branding .sec-g__cont {

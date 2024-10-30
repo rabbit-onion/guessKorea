@@ -1,0 +1,21 @@
+- 우선
+-전체
+ swiper-pagination color 관리, 전역스타일 지정
+-best section
+ 스와이퍼 2개 1개 넘기면 같이 넘어가게(연동시키기)
+ 스와이퍼 loop되게
+-new cesction
+ 스와이퍼 loop X
+-branding section
+ title 위치 확인하고 blind 처리
+-footer작업
+
+==================================
+
+- 차선
+** intro부분 gsap 사용하는걸로 넣기
+반복되는 형태 전부 ul>li로 넣기(다된듯)
+텍스트 bold체-strong, regular-p태그로 넣기
+em단위 수정할지..?
+
+new arrivals 스와이퍼 선 생기는 거 수정

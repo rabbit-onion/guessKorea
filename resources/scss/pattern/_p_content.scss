@@ -5,6 +5,7 @@
 
 .slide {
   position: relative;
+  top: 60px;
   height: 784px;
   .swiper-button-play-pause {
     position: absolute;
@@ -47,7 +48,7 @@
         left: 0;
         right: 0;
         display: block;
-        height: 626px;
+        height: 616px;
       }
       .text-area {
         position: absolute;
@@ -61,15 +62,15 @@
         transition: all 0.5s;
         &__tit {
           position: absolute;
-          top: 14.5%;
-          left: 20px;
+          top: 15.7%;
+          left: $p-mobile;
           display: block;
           font-size: 34px;
           color: $gray-80;
           font-weight: 700;
           text-align: left;
           line-height: 1.2;
-          letter-spacing: -0.07em;
+          letter-spacing: -0.08em;
         }
         &__bottom {
           position: absolute;
@@ -79,7 +80,7 @@
           &__cont {
             font-size: 20px;
             line-height: 1.4;
-            color: $white;
+            letter-spacing: -0.025em;
           }
           &__goto {
             display: flex;
@@ -88,8 +89,8 @@
             width: 105px;
             height: 32px;
             border-radius: 30px;
-            border: 1px solid $white;
-            color: $white;
+            border-width: 1px;
+            border-style: solid;
             font-size: 14px;
             letter-spacing: -0.05em;
             margin-top: 14px;
@@ -105,14 +106,21 @@
         }
       }
     }
+    .intro1,
+    .intro3,
+    .intro5,
+    .intro6,
+    .intro7 {
+      .text-area {
+        color: $white;
+        &__bottom__goto {
+          border-color: $white;
+        }
+      }
+    }
     .intro2 {
       picture {
         background-color: #ffedd6;
-      }
-      img {
-        object-fit: contain;
-        scale: 0.6;
-        margin-left: 30px;
       }
     }
     .swiper-pagination {
@@ -228,15 +236,30 @@
     width: 390px;
     height: 422px;
   }
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  .slide-best-img {
+    .swiper-slide {
+      position: relative;
+      a::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+      }
+    }
   }
+  // .overlay {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  // }
   .best-img-txt-box {
     position: absolute;
     bottom: 20px;
@@ -353,68 +376,69 @@
         @include sr-only;
       }
     }
-    .swiper-slide {
-      img {
-        width: 240px;
-        height: 310px;
-      }
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 240px;
-        height: 310px;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1));
-      }
-      .new-txt {
-        padding: 0 5px;
-        width: 240px;
-        line-height: 1.11;
-        .item-tit {
-          text-align: left;
-          font-size: 18px;
-          font-weight: $font-bold;
-          margin-bottom: 6px;
+    .new-overlay {
+      .swiper-slide {
+        position: relative;
+        a::before {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          right: 0;
+          width: 240px;
+          height: 310px;
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1));
         }
-        .item-en-tit {
-          text-align: left;
-          font-size: 14px;
-          font-weight: $font-light;
-          margin-bottom: 13px;
+        img {
+          width: 240px;
+          height: 310px;
         }
-        .item-tag {
-          display: flex;
-          font-size: 12px;
-          div {
+        .new-txt {
+          padding: 0 5px;
+          width: 240px;
+          line-height: 1.11;
+          .item-tit {
+            text-align: left;
+            font-size: 18px;
+            font-weight: $font-bold;
+            margin-bottom: 6px;
+          }
+          .item-en-tit {
+            text-align: left;
+            font-size: 14px;
+            font-weight: $font-light;
+            margin-bottom: 13px;
+          }
+          .item-tag {
             display: flex;
-            align-items: center;
-            height: 24px;
-            border-radius: 20px;
-            padding: 6px;
-            margin-right: 5px;
-            background-color: #fceaea;
-            color: $primary;
+            font-size: 12px;
+            ul {
+              display: flex;
+              align-items: center;
+              li {
+                height: 24px;
+                border-radius: 12px;
+                padding: 4px 6px;
+                margin-right: 5px;
+                background-color: #fceaea;
+                color: $primary;
+              }
+            }
           }
         }
       }
-    }
-    .swiper-slide:nth-child(2n) {
-      img {
-        width: 300px;
-        height: 220px;
-      }
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 300px;
-        height: 220px;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1));
-      }
-      .new-txt {
-        width: 300px;
+      .swiper-slide:nth-child(2n) {
+        a::before {
+          width: 300px;
+          height: 220px;
+        }
+        img {
+          width: 300px;
+          height: 220px;
+        }
+        .new-txt {
+          width: 300px;
+        }
       }
     }
   }
@@ -448,23 +472,17 @@
       flex-direction: column;
       gap: 18px;
     }
-    .look {
-      width: 353px;
+    a {
+      display: block;
+      width: 350px;
       height: 405px;
-      border-radius: 34px;
-      background-color: lightblue;
-    }
-    .look1 {
-      background: url(../../../resources/images/pattern/common/look1.jpg) center 0 / cover;
-    }
-    .look2 {
-      background: url(../../../resources/images/pattern/common/look2.jpg) center 0 / cover;
-    }
-    .look3 {
-      background: url(../../../resources/images/pattern/common/look3.jpg) center 0 / cover;
-    }
-    .look4 {
-      background: url(../../../resources/images/pattern/common/look4.jpg) center 0 / cover;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 34px;
+        object-fit: cover;
+        object-position: center 0;
+      }
     }
   }
 }
