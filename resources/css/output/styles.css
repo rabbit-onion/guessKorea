@@ -1074,16 +1074,30 @@ legend {
   line-height: 1.5;
 }
 .sec-look .sec-g__cont {
+  margin-top: 32px;
+}
+.sec-look .sec-g__cont ul {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  margin-top: 32px;
 }
 .sec-look .sec-g__cont .look {
   width: 353px;
   height: 405px;
   border-radius: 34px;
   background-color: lightblue;
+}
+.sec-look .sec-g__cont .look1 {
+  background: url(../../../resources/images/pattern/common/look1.jpg) center 0/cover;
+}
+.sec-look .sec-g__cont .look2 {
+  background: url(../../../resources/images/pattern/common/look2.jpg) center 0/cover;
+}
+.sec-look .sec-g__cont .look3 {
+  background: url(../../../resources/images/pattern/common/look3.jpg) center 0/cover;
+}
+.sec-look .sec-g__cont .look4 {
+  background: url(../../../resources/images/pattern/common/look4.jpg) center 0/cover;
 }
 
 .sec-branding .sec-g__cont {
