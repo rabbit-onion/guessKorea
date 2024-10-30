@@ -15,10 +15,10 @@ const swiperIntro = new Swiper(".slide-intro", {
 const swiperBestImg = new Swiper(".slide-best-img", {
   spaceBetween: 30,
   centeredSlides: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -29,10 +29,10 @@ const swiperBestImg = new Swiper(".slide-best-img", {
 const swiperBestInfo = new Swiper(".slide-best-info", {
   spaceBetween: 30,
   centeredSlides: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -69,10 +69,10 @@ playPauseButton.addEventListener("click", function () {
 const swiperNew = new Swiper(".slide-new", {
   slidesPerView: 1.555,
   spaceBetween: 30,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -83,10 +83,10 @@ const swiperNew = new Swiper(".slide-new", {
 const swiperBranding = new Swiper(".slide-branding", {
   spaceBetween: 30,
   centeredSlides: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
