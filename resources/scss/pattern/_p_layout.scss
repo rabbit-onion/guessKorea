@@ -84,9 +84,12 @@
 
 // header
 #header {
-  position: relative;
+  // position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 1000;
   border-bottom: 1px solid #ddd;
+  background-color: $white;
   &.active {
     &::before {
       height: 218px;
