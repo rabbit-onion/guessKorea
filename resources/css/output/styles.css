@@ -669,7 +669,7 @@ legend {
 }
 .slide .swiper-button-play-pause {
   position: absolute;
-  bottom: 3.8%;
+  bottom: 4.4%;
   left: 55%;
   z-index: 9999;
 }
@@ -783,37 +783,6 @@ legend {
   margin: 0 20px 0 0;
   width: 5px;
   height: 5px;
-}
-@media screen and (min-width: 600px) {
-  .slide-intro .swiper-slide img {
-    height: 70vh;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .slide-intro .swiper-slide img {
-    height: 70vh;
-  }
-  .slide-intro .swiper-slide .text-area {
-    width: 100%;
-    max-width: none;
-    text-align: left;
-  }
-  .slide-intro .swiper-slide .text-area__tit {
-    font-size: 6rem;
-  }
-  .slide-intro .swiper-slide .text-area__cont {
-    font-size: 2rem;
-  }
-  .slide-intro .swiper-slide .text-area__goto {
-    margin-top: 30px;
-  }
-  .slide-intro .swiper-pagination {
-    display: block;
-  }
-  .slide-intro .swiper-button-next,
-  .slide-intro .swiper-button-prev {
-    display: none;
-  }
 }
 .sec-best {
   position: relative;
