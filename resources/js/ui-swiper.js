@@ -10,36 +10,49 @@ const swiperIntro = new Swiper(".slide-intro", {
     clickable: true,
   },
   on: {},
+  loop: true,
 });
 
+// new arrivals section
+// ====================================================
+
 const swiperBestImg = new Swiper(".slide-best-img", {
-  spaceBetween: 30,
   centeredSlides: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  effect: "fade",
+  loop: true,
+  speed: 1000,
+  fadeEffect: {
+    crossFade: true,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  on: {},
+  on: {
+    slideChangeTransitionStart: function () {},
+  },
 });
 
 const swiperBestInfo = new Swiper(".slide-best-info", {
-  spaceBetween: 30,
   centeredSlides: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  loop: true,
+  speed: 1000,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  on: {},
 });
 
+// bestImg 스와이퍼와 bestInfo 스와이퍼를 연동
+swiperBestImg.controller.control = swiperBestInfo;
+swiperBestInfo.controller.control = swiperBestImg;
+
+// swiper 재생/정지 버튼
+// ===================================================================
 const swiperWrapper = document.querySelector(".swiper-wrapper");
 const playPauseButton = document.querySelector(".swiper-button-play-pause");
 
@@ -66,6 +79,9 @@ playPauseButton.addEventListener("click", function () {
   }
 });
 
+// new arrivals section
+// ====================================================
+
 const swiperNew = new Swiper(".slide-new", {
   slidesPerView: 1.555,
   spaceBetween: 30,
@@ -77,7 +93,7 @@ const swiperNew = new Swiper(".slide-new", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  on: {},
+  loop: true,
 });
 
 const swiperBranding = new Swiper(".slide-branding", {
@@ -91,5 +107,5 @@ const swiperBranding = new Swiper(".slide-branding", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  on: {},
+  loop: true,
 });

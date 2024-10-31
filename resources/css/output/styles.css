@@ -869,8 +869,14 @@ legend {
   width: 390px;
   height: 422px;
 }
-.sec-best .slide-best-img .swiper-slide {
+.sec-best .slide-best-img {
   position: relative;
+}
+.sec-best .slide-best-img .swiper-slide {
+  opacity: 0;
+}
+.sec-best .slide-best-img .swiper-slide.swiper-slide-active {
+  opacity: 1;
 }
 .sec-best .slide-best-img .swiper-slide a::before {
   position: absolute;
@@ -882,7 +888,7 @@ legend {
   height: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 }
-.sec-best .best-img-txt-box {
+.sec-best .slide-best-img .swiper-slide .best-img-txt-box {
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -893,18 +899,25 @@ legend {
   color: #fff;
   text-align: left;
 }
-.sec-best .best-img-txt-box .best-num {
+.sec-best .slide-best-img .swiper-slide .best-img-txt-box .best-num {
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 4px;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 1s;
 }
-.sec-best .best-img-txt-box .best-name {
+.sec-best .slide-best-img .swiper-slide .best-img-txt-box .best-num.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+.sec-best .slide-best-img .swiper-slide .best-img-txt-box .best-name {
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.09;
 }
-.sec-best .best-img-txt-box::after {
+.sec-best .slide-best-img .swiper-slide .best-img-txt-box::after {
   display: block;
   content: "";
   width: 100%;
@@ -912,10 +925,10 @@ legend {
   background-color: #fff;
   margin-top: 14px;
 }
-.sec-best .slide-best-info .swiper-slide:first-child {
+.sec-best .slide-best-info .swiper-wrapper .swiper-slide {
   background-color: #f2e9dd;
 }
-.sec-best .slide-best-info .best-info-txt-box {
+.sec-best .slide-best-info .swiper-wrapper .best-info-txt-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -924,20 +937,20 @@ legend {
   height: 100%;
   padding: 30px 0;
 }
-.sec-best .slide-best-info .best-info-txt-box .best-info-tit {
+.sec-best .slide-best-info .swiper-wrapper .best-info-txt-box .best-info-tit {
   font-size: 22px;
   font-weight: 700;
   line-height: 1.27;
 }
-.sec-best .slide-best-info .best-info-txt-box .best-info-price {
+.sec-best .slide-best-info .swiper-wrapper .best-info-txt-box .best-info-price {
   font-size: 12px;
   padding: 8px 0;
 }
-.sec-best .slide-best-info .best-info-txt-box .best-info-price-origin {
+.sec-best .slide-best-info .swiper-wrapper .best-info-txt-box .best-info-price-origin {
   color: #ed1b2c;
   text-decoration: line-through;
 }
-.sec-best .slide-best-info img {
+.sec-best .slide-best-info .swiper-wrapper img {
   position: absolute;
   top: 55%;
   left: 50%;

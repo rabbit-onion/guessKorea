@@ -1,15 +1,14 @@
 - 우선
 -전체
  swiper-pagination color 관리, 전역스타일 지정
--best section
- 스와이퍼 2개 1개 넘기면 같이 넘어가게(연동시키기)
- 스와이퍼 loop되게
--new cesction
- 스와이퍼 loop X
+ 스와이퍼 loop되게(공통설정)
 -branding section
- title 위치 확인하고 blind 처리
+ title 위치 확인하고 blind 처리::..??????뭐지 이거 된건가?
 -footer작업
 
+-완료함
+-best section
+ 스와이퍼 2개 1개 넘기면 같이 넘어가게(연동시키기)
 ==================================
 
 - 차선
