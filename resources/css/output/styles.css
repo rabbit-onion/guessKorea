@@ -864,11 +864,6 @@ legend {
   white-space: nowrap !important;
   border: 0 !important;
 }
-.sec-best .slide-best-img,
-.sec-best .slide-best-info {
-  width: 390px;
-  height: 422px;
-}
 .sec-best .slide-best-img {
   position: relative;
 }
@@ -972,13 +967,29 @@ legend {
   width: 5px;
   height: 5px;
 }
+@media (min-width: 600px) {
+  .sec-best .sec-g__cont {
+    display: flex;
+  }
+  .sec-best .sec-g__cont .swiper {
+    margin: 0;
+    flex-grow: 1;
+    border: none;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .sec-best .swiper {
+    height: 576px;
+  }
+}
+
 .sec-new {
   width: 100%;
   height: 664px;
 }
 .sec-new .sec-g__cont {
   position: relative;
-  width: 390px;
+  width: 100%;
   height: 494px;
 }
 .sec-new .sec-g__cont .swiper-button-play-pause {

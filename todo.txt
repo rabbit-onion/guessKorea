@@ -2,6 +2,7 @@
 -전체
  swiper-pagination color 관리, 전역스타일 지정
  스와이퍼 loop되게(공통설정)
+ 스와이퍼 이미지 크기 맞춰주기
 -branding section
  title 위치 확인하고 blind 처리::..??????뭐지 이거 된건가?
 -footer작업
