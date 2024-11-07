@@ -13,7 +13,7 @@ const swiperIntro = new Swiper(".slide-intro", {
   loop: true,
 });
 
-// new arrivals section
+// best arrivals section
 // ====================================================
 
 const swiperBestImg = new Swiper(".slide-best-img", {

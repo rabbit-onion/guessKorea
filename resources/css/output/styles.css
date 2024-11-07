@@ -340,7 +340,8 @@ legend {
   position: relative;
   width: 100%;
   max-width: 1340px;
-  height: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -663,6 +664,10 @@ legend {
   left: 0;
 }
 
+#container {
+  margin-top: 60px;
+}
+
 #footer {
   height: 55px;
   padding: 20px;
@@ -821,11 +826,11 @@ legend {
   height: 5px;
 }
 .sec-best {
-  position: relative;
   height: 1014px;
+  display: flex;
+  flex-direction: column;
 }
 .sec-best .sec-g__cont {
-  position: absolute;
   top: 70px;
   left: 0;
   width: 100%;
@@ -864,6 +869,9 @@ legend {
   white-space: nowrap !important;
   border: 0 !important;
 }
+.sec-best .sec-g__cont .swiper {
+  height: 422px;
+}
 .sec-best .slide-best-img {
   position: relative;
 }
@@ -898,19 +906,13 @@ legend {
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 4px;
-  transform: translateY(-100%);
-  opacity: 0;
-  transition: all 1s;
-}
-.sec-best .slide-best-img .swiper-slide .best-img-txt-box .best-num.show {
-  transform: translateY(0);
-  opacity: 1;
 }
 .sec-best .slide-best-img .swiper-slide .best-img-txt-box .best-name {
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.09;
+  padding-right: 20px;
 }
 .sec-best .slide-best-img .swiper-slide .best-img-txt-box::after {
   display: block;
@@ -947,11 +949,13 @@ legend {
 }
 .sec-best .slide-best-info .swiper-wrapper img {
   position: absolute;
-  top: 55%;
+  top: 58%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 196px;
-  height: 235px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .sec-best .slide-best-info .swiper-pagination {
   display: flex;

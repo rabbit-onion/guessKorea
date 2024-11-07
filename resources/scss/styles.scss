@@ -1,2 +1,12 @@
 @import "component/include";
 @import "pattern/p_include";
+
+body {
+  // background: url(../../images/test/m-main.png) no-repeat 50% 0;
+  @include tabletMore {
+    // background: url(../../images/test/pc-main.png) no-repeat 50% 0;
+  }
+  #wrap {
+    // opacity: 0.7;
+  }
+}
