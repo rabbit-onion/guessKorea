@@ -6,8 +6,11 @@
 
 .slide {
   position: relative;
-  top: 60px;
+  // top: 60px;
   height: 784px;
+  @include tablet {
+    height: 564px;
+  }
   .swiper-button-play-pause {
     position: absolute;
     bottom: 4.4%;
@@ -50,6 +53,14 @@
         right: 0;
         display: block;
         height: 616px;
+        @include tablet {
+          height: 400px;
+        }
+        img {
+          @include tablet {
+            object-position: right center;
+          }
+        }
       }
       .text-area {
         position: absolute;
@@ -57,10 +68,16 @@
         left: 50%;
         transform: translate(-50%, 0);
         width: 100%;
-        max-width: 400px;
+        // max-width: 400px;
         height: 100%;
         opacity: 0;
         transition: all 0.5s;
+        .inner {
+          padding: 0 $p-mobile;
+          @include tablet {
+            padding: 0 $p-tablet;
+          }
+        }
         &__tit {
           position: absolute;
           top: 15.7%;

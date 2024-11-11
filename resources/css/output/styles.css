@@ -347,7 +347,7 @@ legend {
 }
 @media (min-width: 600px) and (max-width: 1023px) {
   .inner {
-    padding: 0 30px;
+    padding: 0 40px;
   }
 }
 
@@ -415,7 +415,7 @@ legend {
 }
 @media (min-width: 600px) {
   .sec-g__more {
-    right: 30px;
+    right: 40px;
   }
 }
 .sec-g__more::after {
@@ -430,11 +430,18 @@ legend {
 }
 
 #header {
-  position: fixed;
+  position: relative;
   width: 100%;
   z-index: 1000;
   border-bottom: 1px solid #ddd;
-  background-color: #fff;
+}
+#header .inner {
+  padding: 0 20px;
+}
+@media (min-width: 1024px) {
+  #header .inner {
+    padding: 0 40px;
+  }
 }
 #header.active::before {
   height: 218px;
@@ -689,8 +696,12 @@ legend {
 
 .slide {
   position: relative;
-  top: 60px;
   height: 784px;
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .slide {
+    height: 564px;
+  }
 }
 .slide .swiper-button-play-pause {
   position: absolute;
@@ -741,16 +752,34 @@ legend {
   display: block;
   height: 616px;
 }
+@media (min-width: 600px) and (max-width: 1023px) {
+  .slide .slide-intro .swiper-slide picture {
+    height: 400px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .slide .slide-intro .swiper-slide picture img {
+    -o-object-position: right center;
+       object-position: right center;
+  }
+}
 .slide .slide-intro .swiper-slide .text-area {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 0);
   width: 100%;
-  max-width: 400px;
   height: 100%;
   opacity: 0;
   transition: all 0.5s;
+}
+.slide .slide-intro .swiper-slide .text-area .inner {
+  padding: 0 20px;
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .slide .slide-intro .swiper-slide .text-area .inner {
+    padding: 0 40px;
+  }
 }
 .slide .slide-intro .swiper-slide .text-area__tit {
   position: absolute;

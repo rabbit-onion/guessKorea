@@ -84,12 +84,17 @@
 
 // header
 #header {
-  // position: relative;
-  position: fixed;
+  position: relative;
+  // position: fixed;
   width: 100%;
   z-index: 1000;
   border-bottom: 1px solid #ddd;
-  background-color: $white;
+  .inner {
+    padding: 0 $p-mobile;
+    @include tabletMore {
+      padding: 0 $p-tablet;
+    }
+  }
   &.active {
     &::before {
       height: 218px;
