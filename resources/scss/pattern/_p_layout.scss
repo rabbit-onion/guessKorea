@@ -50,10 +50,20 @@
 .sec-g {
   overflow: hidden;
   padding-top: 100px;
+  @include tablet {
+    padding-top: 150px;
+  }
   &__tit {
     padding-bottom: 25px;
+    @include tablet {
+      padding-bottom: 35px;
+    }
     h2 {
+      line-height: 1;
       font-size: 30px;
+      @include tablet {
+        font-size: 38px;
+      }
     }
   }
   &__more {
@@ -78,6 +88,10 @@
       height: 20px;
       background: url(../../../resources/images/pattern/common/more.svg) center/cover;
       border-radius: 50%;
+      @include tablet {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }
@@ -315,10 +329,6 @@
     display: block;
     left: 0;
   }
-}
-
-#container {
-  margin-top: 60px;
 }
 
 #footer {

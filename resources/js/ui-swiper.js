@@ -37,10 +37,10 @@ const swiperBestInfo = new Swiper(".slide-best-info", {
   centeredSlides: true,
   loop: true,
   speed: 1000,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

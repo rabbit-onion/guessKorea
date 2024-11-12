@@ -215,7 +215,6 @@
 // }
 
 .sec-best {
-  height: 1014px;
   display: flex;
   flex-direction: column;
   .sec-g__cont {
@@ -250,6 +249,9 @@
     }
     .swiper {
       height: 422px;
+      @include tablet {
+        height: 576px;
+      }
     }
   }
 
@@ -280,17 +282,15 @@
         align-items: flex-start;
         color: $white;
         text-align: left;
+        @include tablet {
+          bottom: 60px;
+          left: $p-tablet;
+          width: calc(100% - $p-tablet);
+        }
         .best-num {
           font-size: 14px;
           font-weight: $font-bold;
           margin-bottom: 4px;
-          // transform: translateY(-100%);
-          // opacity: 0;
-          // transition: all 1s;
-          // &.show {
-          //   transform: translateY(0);
-          //   opacity: 1;
-          // }
         }
         .best-name {
           font-size: 32px;
@@ -298,6 +298,10 @@
           text-transform: uppercase;
           line-height: 1.09;
           padding-right: 20px;
+          @include tablet {
+            font-size: 48px;
+            padding-right: 40px;
+          }
         }
         &::after {
           display: block;
@@ -324,14 +328,24 @@
         width: 100%;
         height: 100%;
         padding: 30px 0;
+        @include tablet {
+          padding: 60px 0;
+        }
         .best-info-tit {
           font-size: 22px;
           font-weight: $font-bold;
           line-height: 1.27;
+          @include tablet {
+            font-size: 26px;
+          }
         }
         .best-info-price {
           font-size: 12px;
           padding: 8px 0;
+          @include tablet {
+            font-size: 14px;
+            padding: 18px 0;
+          }
         }
         .best-info-price-origin {
           color: $primary;
@@ -354,6 +368,9 @@
       left: 50%;
       width: fit-content;
       transform: translateX(-50%);
+      @include tablet {
+        bottom: 60px;
+      }
       .swiper-pagination-bullet {
         background-color: rgb(68, 68, 68);
         margin: 0 20px 0 0;
