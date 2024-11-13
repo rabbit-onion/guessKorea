@@ -83,14 +83,13 @@ playPauseButton.addEventListener("click", function () {
 // ====================================================
 
 const swiperNew = new Swiper(".slide-new", {
-  slidesPerView: 1.555,
-  spaceBetween: 30,
+  slidesPerView: "auto",
   // autoplay: {
   //   delay: 2500,
   //   disableOnInteraction: false,
   // },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".sec-new-pagination",
     clickable: true,
   },
   loop: true,
