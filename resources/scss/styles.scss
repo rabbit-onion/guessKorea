@@ -6,6 +6,9 @@ body {
   @include tabletMore {
     // background: url(../../images/test/pc-main.png) no-repeat 50% 0;
   }
+  @include tablet {
+    // background: url(../../images/test/tablet-main.png) no-repeat 50% 0;
+  }
   #wrap {
     // opacity: 0.7;
   }
