@@ -4,12 +4,15 @@
 .inner {
   position: relative;
   width: 100%;
-  max-width: $grid;
+  // max-width: $grid;
   height: fit-content;
   margin: 0 auto;
   padding: 0 $p-mobile;
   @include tablet {
     padding: 0 $p-tablet;
+  }
+  @include tabletMore {
+    padding: 0 $p-tablet 0 160px;
   }
 }
 
@@ -53,16 +56,25 @@
   @include tablet {
     padding-top: 150px;
   }
+  @include tabletMore {
+    padding-top: 250px;
+  }
   &__tit {
     padding-bottom: 25px;
     @include tablet {
       padding-bottom: 35px;
+    }
+    @include tabletMore {
+      padding-bottom: 65px;
     }
     h2 {
       line-height: 1;
       font-size: 30px;
       @include tablet {
         font-size: 38px;
+      }
+      @include tabletMore {
+        font-size: 64px;
       }
     }
   }
@@ -92,6 +104,10 @@
         width: 24px;
         height: 24px;
       }
+      @include tabletMore {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }
@@ -103,12 +119,6 @@
   width: 100%;
   z-index: 1000;
   border-bottom: 1px solid #ddd;
-  .inner {
-    padding: 0 $p-mobile;
-    @include tabletMore {
-      padding: 0 $p-tablet;
-    }
-  }
   &.active {
     &::before {
       height: 218px;
@@ -135,8 +145,10 @@
     align-items: center;
     max-width: none;
     height: 60px;
+    padding: 0 $p-mobile;
     @include tabletMore {
       height: auto;
+      padding: 0 $p-tablet;
     }
   }
   #logo {

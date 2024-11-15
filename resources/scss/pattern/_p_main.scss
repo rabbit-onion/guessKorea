@@ -252,6 +252,9 @@
       @include tablet {
         height: 576px;
       }
+      @include tabletMore {
+        height: 864px;
+      }
     }
   }
 
@@ -287,20 +290,34 @@
           left: $p-tablet;
           width: calc(100% - $p-tablet);
         }
+        @include tabletMore {
+          bottom: 120px;
+          width: calc(100% - 160px);
+          right: 0;
+          left: auto;
+        }
         .best-num {
           font-size: 14px;
           font-weight: $font-bold;
           margin-bottom: 4px;
+          @include tabletMore {
+            font-size: 22px;
+            margin-bottom: 10px;
+          }
         }
         .best-name {
           font-size: 32px;
           font-weight: $font-bold;
           text-transform: uppercase;
-          line-height: 1.09;
+          line-height: 1.08;
           padding-right: 20px;
           @include tablet {
             font-size: 48px;
             padding-right: 40px;
+          }
+          @include tabletMore {
+            font-size: 80px;
+            padding-right: 50px;
           }
         }
         &::after {
@@ -310,6 +327,9 @@
           height: 1px;
           background-color: $white;
           margin-top: 14px;
+          @include tabletMore {
+            margin-top: 48px;
+          }
         }
       }
     }
@@ -331,12 +351,18 @@
         @include tablet {
           padding: 60px 0;
         }
+        @include tabletMore {
+          padding: 120px 0;
+        }
         .best-info-tit {
           font-size: 22px;
           font-weight: $font-bold;
           line-height: 1.27;
           @include tablet {
             font-size: 26px;
+          }
+          @include tabletMore {
+            font-size: 44px;
           }
         }
         .best-info-price {
@@ -346,10 +372,31 @@
             font-size: 14px;
             padding: 18px 0;
           }
+          @include tabletMore {
+            font-size: 22px;
+            padding: 18px 0;
+          }
         }
         .best-info-price-origin {
           color: $primary;
           text-decoration: line-through;
+        }
+        .best-info-more {
+          @include tabletMore {
+            display: flex;
+            position: absolute;
+            top: 52%;
+            left: 50%;
+            border: 1px solid #000;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(-50%);
+            width: 217px;
+            height: 59px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 32px;
+            z-index: 9999;
+          }
         }
       }
       img {
@@ -360,6 +407,11 @@
         width: 196px;
         height: 200px;
         object-fit: contain;
+        @include tabletMore {
+          top: 59%;
+          width: 320px;
+          height: 280px;
+        }
       }
     }
     .swiper-pagination {
@@ -370,6 +422,9 @@
       transform: translateX(-50%);
       @include tablet {
         bottom: 60px;
+      }
+      @include tabletMore {
+        bottom: 120px;
       }
       .swiper-pagination-bullet {
         background-color: rgb(68, 68, 68);
@@ -408,6 +463,9 @@
     @include tablet {
       padding-left: $p-tablet;
     }
+    @include tabletMore {
+      padding-left: 160px;
+    }
     .swiper-button-play-pause {
       position: absolute;
       bottom: -6px;
@@ -437,6 +495,9 @@
     .new-overlay {
       .swiper-wrapper {
         gap: 14px;
+        @include tabletMore {
+          gap: 60px;
+        }
         .swiper-slide {
           position: relative;
           &::before {
@@ -448,36 +509,57 @@
             width: 240px;
             height: 310px;
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1));
+            @include tabletMore {
+              width: 420px;
+              height: 730px;
+            }
           }
           .new-txt {
             padding: 0 5px;
             width: 240px;
             line-height: 1.11;
+            @include tabletMore {
+              width: 420px;
+            }
             .item-tit {
               text-align: left;
               font-size: 18px;
               font-weight: $font-bold;
               margin-bottom: 6px;
+              @include tabletMore {
+                font-size: 32px;
+                margin-bottom: 12px;
+              }
             }
             .item-en-tit {
               text-align: left;
               font-size: 14px;
               font-weight: $font-light;
               margin-bottom: 13px;
+              @include tabletMore {
+                font-size: 18px;
+                margin-bottom: 27px;
+              }
             }
             .item-tag {
               display: flex;
               font-size: 12px;
+              @include tabletMore {
+                font-size: 18px;
+              }
               ul {
                 display: flex;
                 align-items: center;
                 li {
-                  height: 24px;
-                  border-radius: 12px;
+                  // height: 24px;
+                  border-radius: 22px;
                   padding: 4px 6px;
                   margin-right: 5px;
                   background-color: #fceaea;
                   color: $primary;
+                  @include tabletMore {
+                    padding: 8px 10px;
+                  }
                 }
               }
             }
@@ -489,6 +571,12 @@
           img {
             width: 100%;
             height: 310px;
+          }
+          @include tabletMore {
+            width: 420px;
+            img {
+              height: 730px;
+            }
           }
         }
         .slide-b-type {
@@ -505,6 +593,21 @@
           .new-txt {
             width: 300px;
           }
+          @include tabletMore {
+            width: 598px;
+            &::before {
+              width: 598px;
+              height: 397px;
+            }
+            img {
+              width: 100%;
+              height: 397px;
+              object-position: top;
+            }
+            .new-txt {
+              width: 598px;
+            }
+          }
         }
       }
     }
@@ -514,6 +617,10 @@
     width: fit-content;
     padding-left: 10px;
     padding-top: 60px;
+    @include tabletMore {
+      padding-top: 120px;
+      padding-left: 15px;
+    }
     .swiper-pagination-bullet {
       background-color: rgb(68, 68, 68);
       margin: 0 20px 0 0;
@@ -537,6 +644,9 @@
       display: flex;
       flex-direction: column;
       gap: 18px;
+      @include tablet {
+        gap: 31px;
+      }
     }
     a {
       display: flex;
@@ -555,15 +665,60 @@
       }
     }
     &__img {
-      width: 50%;
       height: 100%;
+      flex-grow: 1;
+      flex-basis: 0;
     }
     &__info-tablet {
-      width: 50%;
+      display: none;
+      position: relative;
       height: 100%;
       background: #e1dfe7;
-      &__txt-box {
-        background: lightcoral;
+      flex-grow: 1;
+      flex-basis: 0;
+      @include tablet {
+        display: block;
+        &__txt-box {
+          position: absolute;
+          bottom: 12%;
+          left: 0;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          padding: 0 30px;
+          .info-name {
+            font-size: 26px;
+            font-weight: $font-bold;
+            line-height: 1.2;
+          }
+          .info-price {
+            font-size: 20px;
+          }
+          .info-more {
+            position: relative;
+            button {
+              position: absolute;
+              top: -15px;
+              right: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 5px;
+              font-size: 14px;
+              padding: 8px 11px 8px 14px;
+              border: 1px solid #000;
+              border-radius: 18px;
+              &::after {
+                display: block;
+                content: "";
+                width: 10px;
+                height: 10px;
+                background: url(../../../resources/images/pattern/common/arrow-right-black.svg) no-repeat 0 0;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -571,9 +726,12 @@
 
 .sec-branding {
   .sec-g__cont {
-    width: 390px;
-    height: 760px;
-    margin-left: -$p-mobile;
+    width: calc(100% + (2 * ($p-mobile)));
+    transform: translateX(-$p-mobile);
+    @include tablet {
+      width: calc(100% + (2 * ($p-tablet)));
+      transform: translateX(-$p-tablet);
+    }
     .swiper-button-play-pause {
       position: absolute;
       bottom: 45px;
@@ -602,12 +760,15 @@
     }
   }
   .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7));
+    @include tablet {
+      height: 387px;
+    }
   }
   .branding-txt {
     position: absolute;
