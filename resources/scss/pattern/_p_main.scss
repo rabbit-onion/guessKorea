@@ -8,9 +8,6 @@
   position: relative;
   // top: 60px;
   height: 784px;
-  @include tablet {
-    height: 564px;
-  }
   .swiper-button-play-pause {
     position: absolute;
     bottom: 4.4%;
@@ -53,107 +50,96 @@
         right: 0;
         display: block;
         height: 616px;
-        @include tablet {
-          height: 400px;
-        }
-        img {
-          @include tablet {
-            object-position: right center;
-          }
-        }
       }
-      .text-area {
+    }
+    .text-area {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 100%;
+      // max-width: 400px;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.5s;
+      .inner {
+        padding: 0 $p-mobile;
+      }
+      &__tit {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 100%;
-        // max-width: 400px;
-        height: 100%;
-        opacity: 0;
-        transition: all 0.5s;
-        .inner {
-          padding: 0 $p-mobile;
-          @include tablet {
-            padding: 0 $p-tablet;
-          }
+        top: 15.7%;
+        left: $p-mobile;
+        display: block;
+        font-size: 34px;
+        color: $gray-80;
+        font-weight: 700;
+        text-align: left;
+        line-height: 1.2;
+        letter-spacing: -0.08em;
+      }
+      &__bottom {
+        position: absolute;
+        bottom: 11%;
+        left: 20px;
+        text-align: left;
+        &__cont {
+          font-size: 20px;
+          line-height: 1.4;
+          letter-spacing: -0.025em;
         }
-        &__tit {
-          position: absolute;
-          top: 15.7%;
-          left: $p-mobile;
-          display: block;
-          font-size: 34px;
-          color: $gray-80;
-          font-weight: 700;
-          text-align: left;
-          line-height: 1.2;
-          letter-spacing: -0.08em;
-        }
-        &__bottom {
-          position: absolute;
-          bottom: 11%;
-          left: 20px;
-          text-align: left;
-          &__cont {
-            font-size: 20px;
-            line-height: 1.4;
-            letter-spacing: -0.025em;
-          }
-          &__goto {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 105px;
-            height: 32px;
-            border-radius: 30px;
-            border-width: 1px;
-            border-style: solid;
-            font-size: 14px;
-            letter-spacing: -0.05em;
-            margin-top: 14px;
-            &::after {
-              display: block;
-              content: "";
-              width: 8px;
-              height: 8px;
-              margin-left: 10px;
-              background: url(../../../resources/images/pattern/common/r-arrow.svg) no-repeat center/contain;
-            }
+        &__goto {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 105px;
+          height: 32px;
+          border-radius: 30px;
+          border-width: 1px;
+          border-style: solid;
+          font-size: 14px;
+          letter-spacing: -0.05em;
+          margin-top: 14px;
+          &::after {
+            display: block;
+            content: "";
+            width: 8px;
+            height: 8px;
+            margin-left: 10px;
+            background: url(../../../resources/images/pattern/common/r-arrow.svg) no-repeat center/contain;
           }
         }
       }
     }
-    .intro1,
-    .intro3,
-    .intro5,
-    .intro6,
-    .intro7 {
-      .text-area {
-        color: $white;
-        &__bottom__goto {
-          border-color: $white;
-        }
+  }
+  .intro1,
+  .intro3,
+  .intro5,
+  .intro6,
+  .intro7 {
+    .text-area {
+      color: $white;
+      &__bottom__goto {
+        border-color: $white;
       }
     }
-    .intro2 {
-      picture {
-        background-color: #ffedd6;
-      }
+  }
+  .intro2 {
+    picture {
+      background-color: #ffedd6;
     }
-    .swiper-pagination {
-      display: flex;
-      width: 50%;
-      bottom: 5.5%;
-      left: 27px;
-      .swiper-pagination-bullet {
-        background-color: $white;
-        margin: 0 20px 0 0;
-        width: 5px;
-        height: 5px;
-        &-active {
-          // bullet이 활성화된 경우
-        }
+  }
+  .swiper-pagination {
+    display: flex;
+    width: 50%;
+    bottom: 5.5%;
+    left: 27px;
+    .swiper-pagination-bullet {
+      background-color: $white;
+      margin: 0 20px 0 0;
+      width: 5px;
+      height: 5px;
+      &-active {
+        // bullet이 활성화된 경우
       }
     }
   }
@@ -249,9 +235,6 @@
     }
     .swiper {
       height: 422px;
-      @include tablet {
-        height: 576px;
-      }
       @include tabletMore {
         height: 864px;
       }
@@ -285,11 +268,6 @@
         align-items: flex-start;
         color: $white;
         text-align: left;
-        @include tablet {
-          bottom: 60px;
-          left: $p-tablet;
-          width: calc(100% - $p-tablet);
-        }
         @include tabletMore {
           bottom: 120px;
           width: calc(100% - 160px);
@@ -311,10 +289,6 @@
           text-transform: uppercase;
           line-height: 1.08;
           padding-right: 20px;
-          @include tablet {
-            font-size: 48px;
-            padding-right: 40px;
-          }
           @include tabletMore {
             font-size: 80px;
             padding-right: 50px;
@@ -348,9 +322,6 @@
         width: 100%;
         height: 100%;
         padding: 30px 0;
-        @include tablet {
-          padding: 60px 0;
-        }
         @include tabletMore {
           padding: 120px 0;
         }
@@ -358,9 +329,6 @@
           font-size: 22px;
           font-weight: $font-bold;
           line-height: 1.27;
-          @include tablet {
-            font-size: 26px;
-          }
           @include tabletMore {
             font-size: 44px;
           }
@@ -368,10 +336,6 @@
         .best-info-price {
           font-size: 12px;
           padding: 8px 0;
-          @include tablet {
-            font-size: 14px;
-            padding: 18px 0;
-          }
           @include tabletMore {
             font-size: 22px;
             padding: 18px 0;
@@ -420,9 +384,6 @@
       left: 50%;
       width: fit-content;
       transform: translateX(-50%);
-      @include tablet {
-        bottom: 60px;
-      }
       @include tabletMore {
         bottom: 120px;
       }
@@ -437,21 +398,6 @@
       }
     }
   }
-  @include mobileMore {
-    .sec-g__cont {
-      display: flex;
-      .swiper {
-        margin: 0;
-        flex-grow: 1;
-        border: none;
-      }
-    }
-  }
-  @include tablet {
-    .swiper {
-      height: 576px;
-    }
-  }
 }
 
 .sec-new {
@@ -460,9 +406,6 @@
   .sec-g__cont {
     position: relative;
     padding-left: $p-mobile;
-    @include tablet {
-      padding-left: $p-tablet;
-    }
     @include tabletMore {
       padding-left: 160px;
     }
@@ -644,9 +587,6 @@
       display: flex;
       flex-direction: column;
       gap: 18px;
-      @include tablet {
-        gap: 31px;
-      }
     }
     a {
       display: flex;
@@ -654,9 +594,6 @@
       height: 405px;
       border-radius: 34px;
       overflow: hidden;
-      @include tablet {
-        height: 630px;
-      }
       img {
         width: 100%;
         height: 100%;
@@ -676,46 +613,43 @@
       background: #e1dfe7;
       flex-grow: 1;
       flex-basis: 0;
-      @include tablet {
-        display: block;
-        &__txt-box {
-          position: absolute;
-          bottom: 12%;
-          left: 0;
-          right: 0;
-          display: flex;
-          flex-direction: column;
-          gap: 24px;
-          padding: 0 30px;
-          .info-name {
-            font-size: 26px;
-            font-weight: $font-bold;
-            line-height: 1.2;
-          }
-          .info-price {
-            font-size: 20px;
-          }
-          .info-more {
-            position: relative;
-            button {
-              position: absolute;
-              top: -15px;
-              right: 0;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: 5px;
-              font-size: 14px;
-              padding: 8px 11px 8px 14px;
-              border: 1px solid #000;
-              border-radius: 18px;
-              &::after {
-                display: block;
-                content: "";
-                width: 10px;
-                height: 10px;
-                background: url(../../../resources/images/pattern/common/arrow-right-black.svg) no-repeat 0 0;
-              }
+      &__txt-box {
+        position: absolute;
+        bottom: 12%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 30px;
+        .info-name {
+          font-size: 26px;
+          font-weight: $font-bold;
+          line-height: 1.2;
+        }
+        .info-price {
+          font-size: 20px;
+        }
+        .info-more {
+          position: relative;
+          button {
+            position: absolute;
+            top: -15px;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            padding: 8px 11px 8px 14px;
+            border: 1px solid #000;
+            border-radius: 18px;
+            &::after {
+              display: block;
+              content: "";
+              width: 10px;
+              height: 10px;
+              background: url(../../../resources/images/pattern/common/arrow-right-black.svg) no-repeat 0 0;
             }
           }
         }
@@ -728,10 +662,6 @@
   .sec-g__cont {
     width: calc(100% + (2 * ($p-mobile)));
     transform: translateX(-$p-mobile);
-    @include tablet {
-      width: calc(100% + (2 * ($p-tablet)));
-      transform: translateX(-$p-tablet);
-    }
     .swiper-button-play-pause {
       position: absolute;
       bottom: 45px;
@@ -766,9 +696,6 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7));
-    @include tablet {
-      height: 387px;
-    }
   }
   .branding-txt {
     position: absolute;
@@ -818,6 +745,88 @@
         // bullet이 활성화된 경우
         width: 191px;
       }
+    }
+  }
+}
+
+// mobile 이상 적용 (tablet, PC)
+@include mobileMore {
+  .slide {
+    height: 564px;
+    .slide-intro {
+      picture {
+        height: 400px;
+        img {
+          object-position: right center;
+        }
+      }
+      .text-area {
+        .inner {
+          padding: 0 $p-tablet;
+        }
+      }
+    }
+  }
+
+  .sec-best {
+    .sec-g__cont {
+      display: flex;
+      .swiper {
+        margin: 0;
+        flex-grow: 1;
+        border: none;
+        height: 576px;
+      }
+    }
+    .slide-best-img {
+      .best-img-txt-box {
+        bottom: 60px;
+        left: $p-tablet;
+        width: calc(100% - $p-tablet);
+        .best-name {
+          font-size: 48px;
+          padding-right: 40px;
+        }
+      }
+    }
+    .slide-best-info {
+      .best-info-txt-box {
+        padding: 60px 0;
+        .best-info-tit {
+          font-size: 26px;
+        }
+        .best-info-price {
+          font-size: 14px;
+          padding: 18px 0;
+        }
+      }
+      .swiper-pagination {
+        bottom: 60px;
+      }
+    }
+  }
+
+  .sec-look {
+    .sec-g__cont {
+      ul {
+        gap: 31px;
+      }
+      a {
+        height: 630px;
+      }
+      &__info-tablet {
+        display: block;
+      }
+    }
+  }
+
+  .sec-branding {
+    .sec-g__cont {
+      width: calc(100% + (2 * ($p-tablet)));
+      transform: translateX(-$p-tablet);
+    }
+    .overlay {
+      height: 387px;
     }
   }
 }
