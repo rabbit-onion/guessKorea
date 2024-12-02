@@ -63,3 +63,28 @@
     content: "\f137";
   }
 }
+
+// 자세히 보기 버튼
+.info-more {
+  position: relative;
+  button {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    padding: 8px 11px 8px 14px;
+    border: 1px solid $black;
+    border-radius: 18px;
+    &::after {
+      display: block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: url(../../../resources/images/pattern/common/arrow-right-black.svg) no-repeat 0 0;
+    }
+  }
+}

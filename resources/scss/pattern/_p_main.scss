@@ -8,7 +8,7 @@
   position: relative;
   top: $hdH;
   height: 784px;
-  @include tablet {
+  @include mobileMore {
     height: 564px;
   }
   .swiper-button-play-pause {
@@ -159,61 +159,6 @@
   }
 }
 
-// tablet
-// @media screen and (min-width: 600px) {
-//   .slide-intro .swiper-slide img {
-//     height: 70vh;
-//   }
-// }
-
-// desktop
-// @media screen and (min-width: 1024px) {
-//   .slide-intro {
-//     .swiper-slide {
-//       img {
-//         height: 70vh;
-//       }
-//       .text-area {
-//         width: 100%;
-//         max-width: none;
-//         text-align: left;
-//       }
-//       .text-area__tit {
-//         font-size: 6rem;
-//       }
-//       .text-area__cont {
-//         font-size: 2rem;
-//       }
-//       .text-area__goto {
-//         margin-top: 30px;
-//       }
-//     }
-//     .swiper-pagination {
-//       display: block;
-//     }
-//     .swiper-button-next,
-//     .swiper-button-prev {
-//       display: none;
-//     }
-//   }
-// }
-
-// .slide-studio {
-//   overflow: visible;
-//   width: 80%;
-//   margin-left: 0;
-//   @include mobileMore {
-//     width: 90%;
-//   }
-//   @include tabletMore {
-//     width: 100%;
-//     margin-left: auto;
-//   }
-//   .swiper-pagination {
-//     bottom: -50px;
-//   }
-// }
-
 .sec-best {
   display: flex;
   flex-direction: column;
@@ -249,10 +194,10 @@
     }
     .swiper {
       height: 422px;
-      @include tablet {
+      @include mobileMore {
         height: 576px;
       }
-      @include tabletMore {
+      @include desktop {
         height: 864px;
       }
     }
@@ -285,14 +230,13 @@
         align-items: flex-start;
         color: $white;
         text-align: left;
-        @include tablet {
+        @include mobileMore {
           bottom: 60px;
           left: $p-tablet;
           width: calc(100% - $p-tablet);
         }
-        @include tabletMore {
+        @include desktop {
           bottom: 120px;
-          width: calc(100% - 160px);
           right: 0;
           left: auto;
         }
@@ -300,7 +244,7 @@
           font-size: 14px;
           font-weight: $font-bold;
           margin-bottom: 4px;
-          @include tabletMore {
+          @include desktop {
             font-size: 22px;
             margin-bottom: 10px;
           }
@@ -309,13 +253,14 @@
           font-size: 32px;
           font-weight: $font-bold;
           text-transform: uppercase;
-          line-height: 1.08;
+          line-height: 1.04;
+          letter-spacing: -1.5px;
           padding-right: 20px;
-          @include tablet {
+          @include mobileMore {
             font-size: 48px;
             padding-right: 40px;
           }
-          @include tabletMore {
+          @include desktop {
             font-size: 80px;
             padding-right: 50px;
           }
@@ -327,7 +272,10 @@
           height: 1px;
           background-color: $white;
           margin-top: 14px;
-          @include tabletMore {
+          @include mobileMore {
+            margin-top: 16px;
+          }
+          @include desktop {
             margin-top: 48px;
           }
         }
@@ -348,31 +296,31 @@
         width: 100%;
         height: 100%;
         padding: 30px 0;
-        @include tablet {
+        @include mobileMore {
           padding: 60px 0;
         }
-        @include tabletMore {
+        @include desktop {
           padding: 120px 0;
         }
         .best-info-tit {
           font-size: 22px;
           font-weight: $font-bold;
           line-height: 1.27;
-          @include tablet {
+          @include mobileMore {
             font-size: 26px;
           }
-          @include tabletMore {
+          @include desktop {
             font-size: 44px;
           }
         }
         .best-info-price {
           font-size: 12px;
           padding: 8px 0;
-          @include tablet {
+          @include mobileMore {
             font-size: 14px;
             padding: 18px 0;
           }
-          @include tabletMore {
+          @include desktop {
             font-size: 22px;
             padding: 18px 0;
           }
@@ -382,7 +330,15 @@
           text-decoration: line-through;
         }
         .best-info-more {
-          @include tabletMore {
+          @include mobileMore {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+              position: static;
+            }
+          }
+          @include desktop {
             display: flex;
             position: absolute;
             top: 52%;
@@ -407,7 +363,7 @@
         width: 196px;
         height: 200px;
         object-fit: contain;
-        @include tabletMore {
+        @include desktop {
           top: 59%;
           width: 320px;
           height: 280px;
@@ -420,10 +376,10 @@
       left: 50%;
       width: fit-content;
       transform: translateX(-50%);
-      @include tablet {
+      @include mobileMore {
         bottom: 60px;
       }
-      @include tabletMore {
+      @include desktop {
         bottom: 120px;
       }
       .swiper-pagination-bullet {
@@ -447,7 +403,7 @@
       }
     }
   }
-  @include tablet {
+  @include desktop {
     .swiper {
       height: 576px;
     }
@@ -460,7 +416,7 @@
   .sec-g__cont {
     position: relative;
     padding-left: $p-mobile;
-    @include tablet {
+    @include mobileMore {
       padding-left: $p-tablet;
     }
     @include tabletMore {
@@ -495,6 +451,9 @@
     .new-overlay {
       .swiper-wrapper {
         gap: 14px;
+        @include mobileMore {
+          gap: 30px;
+        }
         @include tabletMore {
           gap: 60px;
         }
@@ -509,23 +468,30 @@
             width: 240px;
             height: 310px;
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1));
+            @include mobileMore {
+              width: 223px;
+              height: 295px;
+            }
             @include tabletMore {
               width: 420px;
               height: 730px;
             }
           }
           .new-txt {
+            position: relative;
+            top: -8px;
             padding: 0 5px;
-            width: 240px;
+            width: 100%;
             line-height: 1.11;
-            @include tabletMore {
-              width: 420px;
-            }
             .item-tit {
               text-align: left;
               font-size: 18px;
               font-weight: $font-bold;
               margin-bottom: 6px;
+              @include mobileMore {
+                font-size: 20px;
+                // margin-bottom: 12px;
+              }
               @include tabletMore {
                 font-size: 32px;
                 margin-bottom: 12px;
@@ -536,6 +502,10 @@
               font-size: 14px;
               font-weight: $font-light;
               margin-bottom: 13px;
+              @include mobileMore {
+                font-size: 12px;
+                // margin-bottom: 27px;
+              }
               @include tabletMore {
                 font-size: 18px;
                 margin-bottom: 27px;
@@ -544,6 +514,9 @@
             .item-tag {
               display: flex;
               font-size: 12px;
+              @include mobileMore {
+                font-size: 11px;
+              }
               @include tabletMore {
                 font-size: 18px;
               }
@@ -572,6 +545,12 @@
             width: 100%;
             height: 310px;
           }
+          @include mobileMore {
+            width: 223px;
+            img {
+              height: 295px;
+            }
+          }
           @include tabletMore {
             width: 420px;
             img {
@@ -590,8 +569,17 @@
             height: 220px;
             object-position: top;
           }
-          .new-txt {
-            width: 300px;
+          @include mobileMore {
+            width: 280px;
+            &::before {
+              width: 280px;
+              height: 184px;
+            }
+            img {
+              width: 100%;
+              height: 184px;
+              object-position: top;
+            }
           }
           @include tabletMore {
             width: 598px;
@@ -603,9 +591,6 @@
               width: 100%;
               height: 397px;
               object-position: top;
-            }
-            .new-txt {
-              width: 598px;
             }
           }
         }
@@ -644,7 +629,7 @@
       display: flex;
       flex-direction: column;
       gap: 18px;
-      @include tablet {
+      @include mobileMore {
         gap: 31px;
       }
     }
@@ -654,7 +639,7 @@
       height: 405px;
       border-radius: 34px;
       overflow: hidden;
-      @include tablet {
+      @include mobileMore {
         height: 630px;
       }
       img {
@@ -676,7 +661,7 @@
       background: #e1dfe7;
       flex-grow: 1;
       flex-basis: 0;
-      @include tablet {
+      @include mobileMore {
         display: block;
         &__txt-box {
           position: absolute;
@@ -695,29 +680,6 @@
           .info-price {
             font-size: 20px;
           }
-          .info-more {
-            position: relative;
-            button {
-              position: absolute;
-              top: -15px;
-              right: 0;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: 5px;
-              font-size: 14px;
-              padding: 8px 11px 8px 14px;
-              border: 1px solid #000;
-              border-radius: 18px;
-              &::after {
-                display: block;
-                content: "";
-                width: 10px;
-                height: 10px;
-                background: url(../../../resources/images/pattern/common/arrow-right-black.svg) no-repeat 0 0;
-              }
-            }
-          }
         }
       }
     }
@@ -725,6 +687,9 @@
 }
 
 .sec-branding {
+  .sec-g__tit {
+    @include sr-only;
+  }
   .sec-g__cont {
     width: calc(100% + (2 * ($p-mobile)));
     transform: translateX(-$p-mobile);
@@ -766,28 +731,68 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7));
-    @include tablet {
-      height: 387px;
+    @include mobileMore {
+      height: 369px;
     }
+    // @include tablet {
+    //   height: 387px;
+    // }
   }
   .branding-txt {
     position: absolute;
-    bottom: 104px;
+    bottom: 105px;
     left: 0;
     right: 0;
     color: $white;
     font-size: 24px;
     font-weight: 600;
     line-height: 1.15;
+    &__title {
+      letter-spacing: -1px;
+    }
+    &__desc,
+    &__more {
+      display: none;
+    }
+    @include mobileMore {
+      font-size: 26px;
+      &__desc,
+      &__more {
+        display: block;
+      }
+      &__desc {
+        font-size: 14px;
+        font-weight: normal;
+        margin-top: 10px;
+        line-height: 1.43;
+        letter-spacing: -0.5px;
+      }
+      .info-more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        button {
+          position: static;
+          border-color: $white;
+          color: $white;
+          letter-spacing: -1.5px;
+          gap: 10px;
+          &::after {
+            background: url(../../../resources/images/pattern/common/arrow-right.svg) no-repeat 0 0;
+          }
+        }
+      }
+    }
   }
   .swiper-pagination {
     position: absolute;
     display: flex;
     bottom: 55px;
-    left: 20px;
+    left: $p-mobile;
     width: fit-content;
     .swiper-pagination-bullet {
-      background-color: $white;
+      background-color: rgba($white, 0.5);
       margin: 0 20px 0 0;
       width: 17px;
       height: 3px;
@@ -795,6 +800,15 @@
       font-size: 13px;
       font-weight: $font-light;
       text-align: left;
+      &::before {
+        display: block;
+        content: "";
+        width: 0;
+        height: 100%;
+        background-color: rgba($white, 1);
+        transition: all 3s linear;
+        transform-origin: left;
+      }
       &::after {
         padding-top: 5px;
         display: block;
@@ -805,18 +819,28 @@
         content: "01 BRAND";
       }
       &:nth-child(2)::after {
-        content: "02";
+        content: "02 CAMPAIGN";
       }
       &:nth-child(3)::after {
-        content: "03";
+        content: "03 REVIEW";
       }
       &:nth-child(4)::after {
-        content: "04";
+        content: "04 COLLECTIONS";
       }
 
       &-active {
         // bullet이 활성화된 경우
         width: 191px;
+        background-color: rgba($white, 0.1);
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+    @include mobileMore {
+      left: $p-tablet;
+      .swiper-pagination-bullet {
+        width: 140px;
       }
     }
   }

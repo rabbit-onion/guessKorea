@@ -24,4 +24,6 @@
 텍스트 bold체-strong, regular-p태그로 넣기
 em단위 수정할지..?
 
+- header fixed->스크롤 애니메이션
+
 new arrivals 스와이퍼 선 생기는 거 수정
