@@ -477,10 +477,11 @@ legend {
 }
 
 #header {
-  position: relative;
+  position: fixed;
   width: 100%;
   z-index: 1000;
   border-bottom: 1px solid #ddd;
+  background-color: #fff;
 }
 #header.active::before {
   height: 218px;
@@ -712,6 +713,10 @@ legend {
   left: 0;
 }
 
+#container {
+  margin-top: 60px;
+}
+
 #footer {
   height: 55px;
   padding: 20px;
@@ -733,6 +738,7 @@ legend {
 
 .slide {
   position: relative;
+  top: 60px;
   height: 784px;
 }
 @media (min-width: 600px) and (max-width: 1023px) {

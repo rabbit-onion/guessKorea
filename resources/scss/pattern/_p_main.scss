@@ -6,7 +6,7 @@
 
 .slide {
   position: relative;
-  // top: 60px;
+  top: $hdH;
   height: 784px;
   @include tablet {
     height: 564px;
