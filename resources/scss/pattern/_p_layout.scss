@@ -79,7 +79,7 @@
         font-size: 38px;
       }
       @include desktop {
-        font-size: 62px;
+        font-size: 64px;
       }
     }
   }
@@ -88,7 +88,7 @@
     align-items: center;
     gap: 10px;
     position: absolute;
-    top: 14px;
+    top: 5%;
     right: $p-mobile;
     font-size: 2rem;
     text-indent: -9999px;
@@ -133,7 +133,7 @@
     content: "";
     // display: none;
     position: absolute;
-    top: 102px;
+    top: $hdH;
     left: 0;
     right: 0;
     height: 0;
@@ -204,7 +204,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 102px;
+        height: $hdH;
         padding: 0 50px;
         font-size: 1.8rem;
         &:hover {
@@ -233,7 +233,7 @@
   .gnb__depth2 {
     overflow: hidden;
     position: absolute;
-    top: 102px;
+    top: $hdH;
     left: 0;
     right: 0;
     height: 0;
@@ -356,6 +356,7 @@
     font-family: "Noto Sans KR", sans-serif;
     font-size: 13px;
     text-align: left;
+    line-height: 1;
     span {
       font-weight: $font-bolder;
     }

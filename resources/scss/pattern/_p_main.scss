@@ -237,8 +237,8 @@
         }
         @include desktop {
           bottom: 120px;
-          right: 0;
-          left: auto;
+          left: 160px;
+          width: calc(100% - 160px);
         }
         .best-num {
           font-size: 14px;
@@ -253,16 +253,16 @@
           font-size: 32px;
           font-weight: $font-bold;
           text-transform: uppercase;
-          line-height: 1.04;
+          line-height: 1.09;
           letter-spacing: -1.5px;
           padding-right: 20px;
           @include mobileMore {
             font-size: 48px;
-            padding-right: 40px;
+            padding-right: $p-tablet;
           }
           @include desktop {
             font-size: 80px;
-            padding-right: 50px;
+            padding-right: 80px;
           }
         }
         &::after {
@@ -271,10 +271,7 @@
           width: 100%;
           height: 1px;
           background-color: $white;
-          margin-top: 14px;
-          @include mobileMore {
-            margin-top: 16px;
-          }
+          margin-top: 16px;
           @include desktop {
             margin-top: 48px;
           }
@@ -330,6 +327,7 @@
           text-decoration: line-through;
         }
         .best-info-more {
+          display: none;
           @include mobileMore {
             display: flex;
             justify-content: center;
@@ -339,19 +337,20 @@
             }
           }
           @include desktop {
-            display: flex;
             position: absolute;
-            top: 52%;
+            top: 57%;
             left: 50%;
-            border: 1px solid #000;
-            justify-content: center;
-            align-items: center;
             transform: translateX(-50%);
-            width: 217px;
-            height: 59px;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 32px;
-            z-index: 9999;
+            z-index: 5;
+            // display: none;
+            // img 태그에 hover 시 display: flex; 로 변경
+            button {
+              width: 217px;
+              height: 59px;
+              background: rgba(255, 255, 255, 0.7);
+              border-radius: 32px;
+              z-index: 9999;
+            }
           }
         }
       }
@@ -474,7 +473,7 @@
             }
             @include desktop {
               width: 420px;
-              height: 730px;
+              height: 594px;
             }
           }
           .new-txt {
@@ -483,6 +482,9 @@
             padding: 0 5px;
             width: 100%;
             line-height: 1.11;
+            @include desktop {
+              padding: 0 10px;
+            }
             .item-tit {
               text-align: left;
               font-size: 18px;
@@ -502,6 +504,7 @@
               font-size: 14px;
               font-weight: $font-light;
               margin-bottom: 13px;
+              letter-spacing: -0.3px;
               @include mobileMore {
                 font-size: 12px;
                 // margin-bottom: 27px;
@@ -526,9 +529,9 @@
                 li {
                   // height: 24px;
                   border-radius: 22px;
-                  padding: 4px 6px;
+                  padding: 4px 7px 6px 7px;
                   margin-right: 5px;
-                  background-color: #fceaea;
+                  background-color: #fff2f2;
                   color: $primary;
                   @include desktop {
                     padding: 8px 10px;
@@ -554,7 +557,7 @@
           @include desktop {
             width: 420px;
             img {
-              height: 730px;
+              height: 594px;
             }
           }
         }
@@ -702,6 +705,10 @@
       width: calc(100% + (2 * ($p-tablet)));
       transform: translateX(-$p-tablet);
     }
+    @include desktop {
+      width: calc(100% + 200px);
+      transform: translateX(-160px);
+    }
     .swiper-button-play-pause {
       position: absolute;
       bottom: 45px;
@@ -733,10 +740,13 @@
     width: 100%;
     height: auto;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7));
+    @include desktop {
+      height: 793px;
+    }
   }
   .branding-txt {
     position: absolute;
-    bottom: 22%;
+    bottom: 17%;
     left: 0;
     right: 0;
     color: $white;
@@ -752,6 +762,7 @@
     }
     @include mobileMore {
       font-size: 26px;
+      bottom: 22%;
       &__desc,
       &__more {
         display: block;
@@ -780,28 +791,74 @@
         }
       }
     }
+    @include desktop {
+      font-size: 44px;
+      &__desc,
+      &__more {
+        display: block;
+      }
+      &__desc {
+        font-size: 22px;
+        font-weight: normal;
+        margin-top: 18px;
+        line-height: 1.3;
+        letter-spacing: -1.2px;
+      }
+      .info-more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        button {
+          position: static;
+          // border-color: $white;
+          border-radius: 23px;
+          // color: $white;
+          // letter-spacing: -1.5px;
+          // gap: 10px;
+          font-size: 18px;
+          padding: 10px 11px 10px 19px;
+          &::after {
+            // background: url(../../../resources/images/pattern/common/arrow-right.svg) no-repeat 0 0;
+            width: 13px;
+            height: 13px;
+          }
+        }
+      }
+    }
   }
   .swiper-pagination {
     position: absolute;
     display: flex;
+    gap: 4%;
     bottom: 55px;
     left: $p-mobile;
-    width: fit-content;
+    width: 79%;
     @include mobileMore {
       left: $p-tablet;
-      .swiper-pagination-bullet {
-        width: 140px;
-      }
+      gap: 2%;
+      width: 83%;
+    }
+    @include tabletMore {
+      gap: 2%;
+      width: 85%;
+    }
+    @include desktop {
+      left: 65px;
+      bottom: 100px;
     }
     .swiper-pagination-bullet {
       background-color: rgba($white, 0.5);
-      margin: 0 20px 0 0;
       width: 17px;
       height: 3px;
       border-radius: 0;
       font-size: 13px;
       font-weight: $font-light;
       text-align: left;
+      @include mobileMore {
+        // width: 140px;
+        width: 100%;
+      }
       &::before {
         display: block;
         content: "";
@@ -816,6 +873,9 @@
         display: block;
         content: "";
         color: $white;
+        @include desktop {
+          font-size: 22px;
+        }
       }
       &:first-child::after {
         content: "01 BRAND";
@@ -832,10 +892,18 @@
 
       &-active {
         // bullet이 활성화된 경우
-        width: 191px;
+        // width: 191px;
+        width: 100%;
         background-color: rgba($white, 0.1);
         &::before {
           width: 100%;
+        }
+        @include desktop {
+          // width: 396px;
+          background-color: rgba($white, 0.1);
+          &::before {
+            width: 100%;
+          }
         }
       }
     }

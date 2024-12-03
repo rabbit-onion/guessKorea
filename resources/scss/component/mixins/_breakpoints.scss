@@ -32,7 +32,7 @@
   }
 }
 
-// 1440px 이상
+// 1440px 이상 (desktop2 ver.)
 @mixin desktop {
   @media (min-width: $breakpoint-lg) {
     @content;
