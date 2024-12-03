@@ -921,14 +921,15 @@ legend {
   flex-direction: column;
 }
 .sec-best .sec-g__cont {
-  top: 70px;
+  position: relative;
+  top: 0;
   left: 0;
   width: 100%;
 }
 .sec-best .sec-g__cont .swiper-button-play-pause {
   position: absolute;
-  bottom: 2.6%;
-  left: 55%;
+  bottom: 2.5%;
+  left: 67%;
 }
 .sec-best .sec-g__cont .swiper-button-play-pause.default::before {
   display: block;
@@ -1222,8 +1223,8 @@ legend {
 }
 .sec-new .sec-g__cont .swiper-button-play-pause {
   position: absolute;
-  bottom: -6px;
-  left: 50%;
+  bottom: -0.8%;
+  left: 44%;
 }
 .sec-new .sec-g__cont .swiper-button-play-pause.default::before {
   display: block;
