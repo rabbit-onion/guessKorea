@@ -45,6 +45,22 @@
       height: 100%;
     }
   }
+
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      background-color: rgb(68, 68, 68);
+      width: 5px;
+      height: 5px;
+      .progress-ring {
+        position: relative;
+        // top, left circle 반지름만큼 이동
+        top: -10px;
+        left: -10px;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
   .swiper-button-next::after,
   .swiper-button-prev::after {
     display: none;

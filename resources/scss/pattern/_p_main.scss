@@ -146,15 +146,12 @@
       width: 50%;
       bottom: 5.5%;
       left: 27px;
-      .swiper-pagination-bullet {
-        background-color: $white;
-        margin: 0 20px 0 0;
-        width: 5px;
-        height: 5px;
-        &-active {
-          // bullet이 활성화된 경우
-        }
-      }
+      // .swiper-pagination-bullet {
+      //   background-color: $white;
+      //   margin: 0 20px 0 0;
+      //   width: 5px;
+      //   height: 5px;
+      // }
     }
   }
 }
@@ -382,15 +379,6 @@
       @include desktop {
         bottom: 120px;
       }
-      .swiper-pagination-bullet {
-        background-color: rgb(68, 68, 68);
-        margin: 0 20px 0 0;
-        width: 5px;
-        height: 5px;
-        .progress-ring {
-          transform: rotate(-90deg);
-        }
-      }
     }
   }
   @include mobileMore {
@@ -610,15 +598,15 @@
       padding-top: 120px;
       padding-left: 15px;
     }
-    .swiper-pagination-bullet {
-      background-color: rgb(68, 68, 68);
-      margin: 0 20px 0 0;
-      width: 5px;
-      height: 5px;
-      &-active {
-        // bullet이 활성화된 경우
-      }
-    }
+    // .swiper-pagination-bullet {
+    //   background-color: rgb(68, 68, 68);
+    //   margin: 0 20px 0 0;
+    //   width: 5px;
+    //   height: 5px;
+    //   &-active {
+    //     // bullet이 활성화된 경우
+    //   }
+    // }
   }
 }
 

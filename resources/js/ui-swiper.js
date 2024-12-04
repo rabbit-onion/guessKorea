@@ -1,3 +1,9 @@
+// pagination bullet(active) 원의 반지름, 길이 지정
+const r = 10;
+const lengthCircle = 2 * Math.PI * r;
+
+// intro slide
+// ==============================================================
 const swiperIntro = new Swiper(".slide-intro", {
   spaceBetween: 30,
   centeredSlides: true,
@@ -9,7 +15,6 @@ const swiperIntro = new Swiper(".slide-intro", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  on: {},
   loop: true,
   secName: "slide",
 });
@@ -28,9 +33,6 @@ const swiperBestImg = new Swiper(".slide-best-img", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  on: {
-    slideChangeTransitionStart: function () {},
-  },
   secName: "sec-best",
 });
 
@@ -45,14 +47,14 @@ const swiperBestInfo = new Swiper(".slide-best-info", {
   on: {
     autoplayTimeLeft(s, time, progress) {
       const circles = document.querySelectorAll(".progress-ring__circle");
+      const activeCircle = document.querySelector(".swiper-pagination-bullet-active .progress-ring__circle");
+      const offset = lengthCircle * progress;
+
+      activeCircle.style.strokeDashoffset = offset;
 
       circles.forEach((circle) => {
-        const activeCircle = document.querySelector(".swiper-pagination-bullet-active .progress-ring__circle");
-        const offset = 44 * progress; // 진행 상황에 따라 offset 계산
-        if (circle === activeCircle) {
-          circle.style.strokeDashoffset = offset;
-        } else {
-          circle.style.strokeDashoffset = 44;
+        if (circle !== activeCircle) {
+          circle.style.strokeDashoffset = lengthCircle;
         }
       });
     },
@@ -63,17 +65,17 @@ const swiperBestInfo = new Swiper(".slide-best-info", {
     renderBullet: function (index, className) {
       return `
         <span class="${className}">
-          <svg class="progress-ring" width="20" height="20">
+          <svg class="progress-ring" width="25" height="25">
             <circle
               class="progress-ring__circle"
-              cx="10"
-              cy="10"
-              r="7"
+              cx="12.5"
+              cy="12.5"
+              r=${r}
               fill="transparent"
               stroke="#858585"
               stroke-width="1"
-              stroke-dasharray="44"
-              stroke-dashoffset="44"
+              stroke-dasharray=${lengthCircle}
+              stroke-dashoffset=${lengthCircle}
             ></circle>
           </svg>
         </span>`;
@@ -88,7 +90,6 @@ swiperBestInfo.controller.control = swiperBestImg;
 
 // new arrivals section
 // ====================================================
-
 const swiperNew = new Swiper(".slide-new", {
   slidesPerView: "auto",
   autoplay: {
@@ -103,6 +104,8 @@ const swiperNew = new Swiper(".slide-new", {
   secName: "sec-new",
 });
 
+// branding section
+// ==========================================================
 const swiperBranding = new Swiper(".slide-branding", {
   spaceBetween: 30,
   centeredSlides: true,

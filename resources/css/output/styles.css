@@ -317,6 +317,17 @@ legend {
   width: 100%;
   height: 100%;
 }
+.swiper .swiper-pagination .swiper-pagination-bullet {
+  background-color: rgb(68, 68, 68);
+  width: 5px;
+  height: 5px;
+}
+.swiper .swiper-pagination .swiper-pagination-bullet .progress-ring {
+  position: relative;
+  top: -10px;
+  left: -10px;
+  transform: rotate(-90deg);
+}
 .swiper .swiper-button-next::after,
 .swiper .swiper-button-prev::after {
   display: none;
@@ -910,12 +921,7 @@ legend {
   bottom: 5.5%;
   left: 27px;
 }
-.slide .slide-intro .swiper-pagination .swiper-pagination-bullet {
-  background-color: #fff;
-  margin: 0 20px 0 0;
-  width: 5px;
-  height: 5px;
-}
+
 .sec-best {
   display: flex;
   flex-direction: column;
@@ -1182,15 +1188,6 @@ legend {
     bottom: 120px;
   }
 }
-.sec-best .slide-best-info .swiper-pagination .swiper-pagination-bullet {
-  background-color: rgb(68, 68, 68);
-  margin: 0 20px 0 0;
-  width: 5px;
-  height: 5px;
-}
-.sec-best .slide-best-info .swiper-pagination .swiper-pagination-bullet .progress-ring {
-  transform: rotate(-90deg);
-}
 @media (min-width: 600px) {
   .sec-best .sec-g__cont {
     display: flex;
@@ -1452,12 +1449,7 @@ legend {
     padding-left: 15px;
   }
 }
-.sec-new .swiper-pagination .swiper-pagination-bullet {
-  background-color: rgb(68, 68, 68);
-  margin: 0 20px 0 0;
-  width: 5px;
-  height: 5px;
-}
+
 .sec-look .sec-g__desc {
   font-size: 20px;
   line-height: 1.5;
