@@ -389,9 +389,6 @@
         height: 5px;
         .progress-ring {
           transform: rotate(-90deg);
-          &__circle {
-            transition: all 3s linear;
-          }
         }
       }
     }

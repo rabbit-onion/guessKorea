@@ -16,7 +16,6 @@ const swiperIntro = new Swiper(".slide-intro", {
 
 // best arrivals section
 // ====================================================
-
 const swiperBestImg = new Swiper(".slide-best-img", {
   centeredSlides: true,
   effect: "fade",
@@ -42,14 +41,20 @@ const swiperBestInfo = new Swiper(".slide-best-info", {
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
-    on: {
-      autoplayTimeLeft(s, time, progress) {
-        const circles = document.querySelectorAll(".progress-ring__circle");
-        circles.forEach((circle) => {
-          const offset = 44 * (1 - progress); // 진행 상황에 따라 offset 계산
+  },
+  on: {
+    autoplayTimeLeft(s, time, progress) {
+      const circles = document.querySelectorAll(".progress-ring__circle");
+
+      circles.forEach((circle) => {
+        const activeCircle = document.querySelector(".swiper-pagination-bullet-active .progress-ring__circle");
+        const offset = 44 * progress; // 진행 상황에 따라 offset 계산
+        if (circle === activeCircle) {
           circle.style.strokeDashoffset = offset;
-        });
-      },
+        } else {
+          circle.style.strokeDashoffset = 44;
+        }
+      });
     },
   },
   pagination: {
@@ -65,8 +70,8 @@ const swiperBestInfo = new Swiper(".slide-best-info", {
               cy="10"
               r="7"
               fill="transparent"
-              stroke="#000"
-              stroke-width="2"
+              stroke="#858585"
+              stroke-width="1"
               stroke-dasharray="44"
               stroke-dashoffset="44"
             ></circle>
