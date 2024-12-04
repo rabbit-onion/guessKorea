@@ -387,8 +387,11 @@
         margin: 0 20px 0 0;
         width: 5px;
         height: 5px;
-        &-active {
-          // bullet이 활성화된 경우
+        .progress-ring {
+          transform: rotate(-90deg);
+          &__circle {
+            transition: all 3s linear;
+          }
         }
       }
     }

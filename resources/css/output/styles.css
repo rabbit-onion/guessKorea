@@ -1188,6 +1188,12 @@ legend {
   width: 5px;
   height: 5px;
 }
+.sec-best .slide-best-info .swiper-pagination .swiper-pagination-bullet .progress-ring {
+  transform: rotate(-90deg);
+}
+.sec-best .slide-best-info .swiper-pagination .swiper-pagination-bullet .progress-ring__circle {
+  transition: all 3s linear;
+}
 @media (min-width: 600px) {
   .sec-best .sec-g__cont {
     display: flex;

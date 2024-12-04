@@ -42,10 +42,37 @@ const swiperBestInfo = new Swiper(".slide-best-info", {
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
+    on: {
+      autoplayTimeLeft(s, time, progress) {
+        const circles = document.querySelectorAll(".progress-ring__circle");
+        circles.forEach((circle) => {
+          const offset = 44 * (1 - progress); // 진행 상황에 따라 offset 계산
+          circle.style.strokeDashoffset = offset;
+        });
+      },
+    },
   },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    renderBullet: function (index, className) {
+      return `
+        <span class="${className}">
+          <svg class="progress-ring" width="20" height="20">
+            <circle
+              class="progress-ring__circle"
+              cx="10"
+              cy="10"
+              r="7"
+              fill="transparent"
+              stroke="#000"
+              stroke-width="2"
+              stroke-dasharray="44"
+              stroke-dashoffset="44"
+            ></circle>
+          </svg>
+        </span>`;
+    },
   },
   secName: "sec-best",
 });
@@ -88,8 +115,7 @@ const swiperBranding = new Swiper(".slide-branding", {
 
 // swiper 재생/정지 버튼 컨트롤
 // ============================================================================
-// const swiperWrapper = document.querySelector(".swiper-wrapper");
-
+const swiperWrapper = document.querySelector(".swiper-wrapper");
 const swiperList = [swiperIntro, swiperBestImg, swiperBestInfo, swiperNew, swiperBranding];
 
 swiperList.forEach((item) => {
