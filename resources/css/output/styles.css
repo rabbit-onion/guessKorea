@@ -765,7 +765,7 @@ legend {
 .sec-b {
   border: 3px solid #acc5d3;
   width: 100%;
-  height: 500px;
+  height: 100vh;
 }
 
 :root {
@@ -1772,4 +1772,22 @@ legend {
   .sec-branding .swiper-pagination .swiper-pagination-bullet-active::before {
     width: 100%;
   }
+}
+
+.brand-key__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.brand-key__top h1 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }/*# sourceMappingURL=styles.css.map */

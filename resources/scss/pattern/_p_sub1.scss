@@ -1,1 +1,12 @@
 // 서브페이지 스타일
+.brand-key {
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    h1 {
+      @include sr-only;
+    }
+  }
+}
