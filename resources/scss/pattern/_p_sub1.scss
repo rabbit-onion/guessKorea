@@ -1,12 +1,63 @@
 // 서브페이지 스타일
+// 공통/레이아웃 스타일
+.brand-h1 {
+  @include sr-only;
+}
+
+.brand-h2 {
+  @include sr-only;
+}
+
+.sec-b-inner {
+  height: 100%;
+  padding: 0 30px;
+}
+
+// ======================
+
 .brand-key {
+  height: 200vh;
   &__top {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    h1 {
-      @include sr-only;
+    height: 50%;
+    border-bottom: 3px solid salmon;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    &__txt {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        text-align: center;
+        line-height: 1.35;
+        margin-bottom: 38px;
+        strong {
+          font-size: 35px;
+          letter-spacing: -1px;
+        }
+      }
+    }
+  }
+}
+
+.brand-intro {
+  .sec-b-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      font-size: 20px;
+      text-align: center;
+      strong {
+        color: $primary;
+      }
     }
   }
 }

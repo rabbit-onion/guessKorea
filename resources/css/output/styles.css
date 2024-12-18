@@ -1774,13 +1774,7 @@ legend {
   }
 }
 
-.brand-key__top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-.brand-key__top h1 {
+.brand-h1 {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -1790,4 +1784,66 @@ legend {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+.brand-h2 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.sec-b-inner {
+  height: 100%;
+  padding: 0 30px;
+}
+
+.brand-key {
+  height: 200vh;
+}
+.brand-key__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  border-bottom: 3px solid salmon;
+}
+.brand-key__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+.brand-key__bottom__txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.brand-key__bottom__txt p {
+  text-align: center;
+  line-height: 1.35;
+  margin-bottom: 38px;
+}
+.brand-key__bottom__txt p strong {
+  font-size: 35px;
+  letter-spacing: -1px;
+}
+
+.brand-intro .sec-b-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-intro .sec-b-inner div {
+  font-size: 20px;
+  text-align: center;
+}
+.brand-intro .sec-b-inner div strong {
+  color: #ed1b2c;
 }/*# sourceMappingURL=styles.css.map */
