@@ -27,6 +27,10 @@
   }
 }
 
+svg {
+  overflow: visible;
+}
+
 // =======================================
 
 .brand-key {
@@ -37,6 +41,15 @@
     align-items: center;
     height: 50%;
     border-bottom: 3px solid salmon;
+    svg {
+      height: 43px;
+      @include mobileMore {
+        height: 37.55px;
+      }
+      @include tabletMore {
+        height: 93px;
+      }
+    }
   }
   &__bottom {
     display: flex;
@@ -57,13 +70,7 @@
           font-size: 35px;
           letter-spacing: -1px;
         }
-      }
-      svg {
-        width: 99px;
-        height: 17px;
-      }
-      @include mobileMore {
-        p {
+        @include mobileMore {
           font-size: 12px;
           letter-spacing: 1.5px;
           margin-bottom: 53px;
@@ -71,9 +78,22 @@
             margin-top: 8px;
           }
         }
-        svg {
-          width: 86px;
+        @include tabletMore {
+          font-size: 32px;
+          letter-spacing: 4px;
+          margin-bottom: 70px;
+          strong {
+            font-size: 80px;
+          }
+        }
+      }
+      svg {
+        height: 17px;
+        @include mobileMore {
           height: 15px;
+        }
+        @include tabletMore {
+          height: 38px;
         }
       }
     }
@@ -90,6 +110,9 @@
   &__txt {
     font-size: 19.5px;
     text-align: center;
+    @include tabletMore {
+      font-size: 48px;
+    }
     strong {
       color: $primary;
     }
@@ -99,11 +122,14 @@
     left: auto;
     right: auto;
     bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include mobileMore {
       display: none;
     }
     p {
-      font-size: 16px;
+      font-size: 15px;
       letter-spacing: -1px;
     }
   }
@@ -119,21 +145,42 @@
 
 .brand-info {
   height: auto;
-  .sec-b__inner {
-    padding: 30px;
-    height: auto;
+  @include tabletMore {
+    display: flex;
+    flex-direction: row-reverse;
+    &__box {
+      width: 50%;
+    }
   }
   &__txt {
+    padding: 30px;
+    @include mobileMore {
+      padding: 45px;
+    }
+    @include tabletMore {
+      padding: 110px;
+    }
     &__title {
-      display: flex;
-      flex-direction: column;
-      gap: 11px;
       strong {
         font-size: 34px;
+        display: block;
+        margin-top: 3px;
+        margin-bottom: 10px;
       }
       svg {
-        width: 95px;
-        height: 25px;
+        height: 17px;
+      }
+      @include tabletMore {
+        font-size: 32px;
+        strong {
+          font-size: 80px;
+          letter-spacing: -3px;
+          margin-top: 7px;
+          margin-bottom: 50px;
+        }
+        svg {
+          height: 35px;
+        }
       }
     }
     &__body {
@@ -142,6 +189,16 @@
       flex-direction: column;
       gap: 10px;
       margin-top: 35px;
+      @include mobileMore {
+        gap: 18px;
+      }
+      @include tabletMore {
+        font-size: 20px;
+        margin-top: 60px;
+        gap: 24px;
+        line-height: 1.75;
+        letter-spacing: 1px;
+      }
     }
   }
   &__img {
@@ -169,13 +226,19 @@
     width: 100%;
     text-align: center;
     svg {
-      width: 92px;
       height: 16px;
+      @include tabletMore {
+        height: 42px;
+      }
     }
     h3 {
       font-size: 31.5px;
       @include mobileMore {
         margin-top: 10px;
+      }
+      @include tabletMore {
+        font-size: 80px;
+        margin-top: 30px;
       }
     }
   }
@@ -190,14 +253,29 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 30px;
+    padding: 20px 30px;
+    @include mobileMore {
+      padding: 60px 3;
+      gap: 24px;
+    }
     p:first-child {
-      font-size: 12px;
+      font-size: 10px;
       strong {
         font-size: 16px;
       }
       span {
+        display: inline-block;
+        margin: 0 3px;
         font-weight: $font-bold;
+      }
+      @include tabletMore {
+        font-size: 18px;
+        strong {
+          font-size: 30px;
+        }
+        span {
+          margin: 0 6px;
+        }
       }
     }
     h2 {

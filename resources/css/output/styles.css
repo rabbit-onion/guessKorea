@@ -1815,6 +1815,10 @@ legend {
     display: inline;
   }
 }
+svg {
+  overflow: visible;
+}
+
 .brand-key {
   height: 200vh;
 }
@@ -1824,6 +1828,19 @@ legend {
   align-items: center;
   height: 50%;
   border-bottom: 3px solid salmon;
+}
+.brand-key__top svg {
+  height: 43px;
+}
+@media (min-width: 600px) {
+  .brand-key__top svg {
+    height: 37.55px;
+  }
+}
+@media (min-width: 1024px) {
+  .brand-key__top svg {
+    height: 93px;
+  }
 }
 .brand-key__bottom {
   display: flex;
@@ -1847,10 +1864,6 @@ legend {
   font-size: 35px;
   letter-spacing: -1px;
 }
-.brand-key__bottom__txt svg {
-  width: 99px;
-  height: 17px;
-}
 @media (min-width: 600px) {
   .brand-key__bottom__txt p {
     font-size: 12px;
@@ -1860,9 +1873,28 @@ legend {
   .brand-key__bottom__txt p strong {
     margin-top: 8px;
   }
+}
+@media (min-width: 1024px) {
+  .brand-key__bottom__txt p {
+    font-size: 32px;
+    letter-spacing: 4px;
+    margin-bottom: 70px;
+  }
+  .brand-key__bottom__txt p strong {
+    font-size: 80px;
+  }
+}
+.brand-key__bottom__txt svg {
+  height: 17px;
+}
+@media (min-width: 600px) {
   .brand-key__bottom__txt svg {
-    width: 86px;
     height: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .brand-key__bottom__txt svg {
+    height: 38px;
   }
 }
 
@@ -1876,6 +1908,11 @@ legend {
   font-size: 19.5px;
   text-align: center;
 }
+@media (min-width: 1024px) {
+  .brand-intro__txt {
+    font-size: 48px;
+  }
+}
 .brand-intro__txt strong {
   color: #ed1b2c;
 }
@@ -1884,6 +1921,9 @@ legend {
   left: auto;
   right: auto;
   bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 600px) {
   .brand-intro__arrow {
@@ -1891,7 +1931,7 @@ legend {
   }
 }
 .brand-intro__arrow p {
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: -1px;
 }
 
@@ -1905,21 +1945,50 @@ legend {
 .brand-info {
   height: auto;
 }
-.brand-info .sec-b__inner {
-  padding: 30px;
-  height: auto;
+@media (min-width: 1024px) {
+  .brand-info {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .brand-info__box {
+    width: 50%;
+  }
 }
-.brand-info__txt__title {
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
+.brand-info__txt {
+  padding: 30px;
+}
+@media (min-width: 600px) {
+  .brand-info__txt {
+    padding: 45px;
+  }
+}
+@media (min-width: 1024px) {
+  .brand-info__txt {
+    padding: 110px;
+  }
 }
 .brand-info__txt__title strong {
   font-size: 34px;
+  display: block;
+  margin-top: 3px;
+  margin-bottom: 10px;
 }
 .brand-info__txt__title svg {
-  width: 95px;
-  height: 25px;
+  height: 17px;
+}
+@media (min-width: 1024px) {
+  .brand-info__txt__title {
+    font-size: 32px;
+  }
+  .brand-info__txt__title strong {
+    font-size: 80px;
+    letter-spacing: -3px;
+    margin-top: 7px;
+    margin-bottom: 50px;
+  }
+  .brand-info__txt__title svg {
+    height: 35px;
+  }
 }
 .brand-info__txt__body {
   font-size: 13px;
@@ -1927,6 +1996,20 @@ legend {
   flex-direction: column;
   gap: 10px;
   margin-top: 35px;
+}
+@media (min-width: 600px) {
+  .brand-info__txt__body {
+    gap: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .brand-info__txt__body {
+    font-size: 20px;
+    margin-top: 60px;
+    gap: 24px;
+    line-height: 1.75;
+    letter-spacing: 1px;
+  }
 }
 .brand-info__img img {
   display: block;
@@ -1951,8 +2034,12 @@ legend {
   text-align: center;
 }
 .brand-pillar__txt svg {
-  width: 92px;
   height: 16px;
+}
+@media (min-width: 1024px) {
+  .brand-pillar__txt svg {
+    height: 42px;
+  }
 }
 .brand-pillar__txt h3 {
   font-size: 31.5px;
@@ -1960,6 +2047,12 @@ legend {
 @media (min-width: 600px) {
   .brand-pillar__txt h3 {
     margin-top: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .brand-pillar__txt h3 {
+    font-size: 80px;
+    margin-top: 30px;
   }
 }
 
@@ -1973,16 +2066,35 @@ legend {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 30px;
+  padding: 20px 30px;
+}
+@media (min-width: 600px) {
+  .brand-product__txt {
+    padding: 60px 3;
+    gap: 24px;
+  }
 }
 .brand-product__txt p:first-child {
-  font-size: 12px;
+  font-size: 10px;
 }
 .brand-product__txt p:first-child strong {
   font-size: 16px;
 }
 .brand-product__txt p:first-child span {
+  display: inline-block;
+  margin: 0 3px;
   font-weight: 700;
+}
+@media (min-width: 1024px) {
+  .brand-product__txt p:first-child {
+    font-size: 18px;
+  }
+  .brand-product__txt p:first-child strong {
+    font-size: 30px;
+  }
+  .brand-product__txt p:first-child span {
+    margin: 0 6px;
+  }
 }
 .brand-product__txt h2 {
   font-size: 28px;
