@@ -15,7 +15,19 @@
   }
 }
 
-// ======================
+.mobileMore-br {
+  display: none;
+}
+@include mobileMore {
+  .mobile-br {
+    display: none;
+  }
+  .mobileMore-br {
+    display: inline;
+  }
+}
+
+// =======================================
 
 .brand-key {
   height: 200vh;
@@ -41,8 +53,27 @@
         line-height: 1.35;
         margin-bottom: 38px;
         strong {
+          display: block;
           font-size: 35px;
           letter-spacing: -1px;
+        }
+      }
+      svg {
+        width: 99px;
+        height: 17px;
+      }
+      @include mobileMore {
+        p {
+          font-size: 12px;
+          letter-spacing: 1.5px;
+          margin-bottom: 53px;
+          strong {
+            margin-top: 8px;
+          }
+        }
+        svg {
+          width: 86px;
+          height: 15px;
         }
       }
     }
@@ -55,12 +86,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    div {
-      font-size: 20px;
-      text-align: center;
-      strong {
-        color: $primary;
-      }
+  }
+  &__txt {
+    font-size: 19.5px;
+    text-align: center;
+    strong {
+      color: $primary;
     }
   }
   &__arrow {
@@ -68,6 +99,9 @@
     left: auto;
     right: auto;
     bottom: 40px;
+    @include mobileMore {
+      display: none;
+    }
     p {
       font-size: 16px;
       letter-spacing: -1px;
@@ -133,12 +167,86 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    text-align: center;
     svg {
       width: 92px;
       height: 16px;
     }
     h3 {
-      font-size: 32.5px;
+      font-size: 31.5px;
+      @include mobileMore {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.brand-product {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  &__txt {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    p:first-child {
+      font-size: 12px;
+      strong {
+        font-size: 16px;
+      }
+      span {
+        font-weight: $font-bold;
+      }
+    }
+    h2 {
+      font-size: 28px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 13px;
+    }
+    a {
+      font-size: 12px;
+    }
+  }
+  @include mobileMore {
+    flex-direction: row;
+    gap: 0;
+    &__box {
+      width: 50%;
+    }
+  }
+}
+
+.brand-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    text-align: center;
+    h3 {
+      font-size: 34px;
+      letter-spacing: -1.5px;
+    }
+    svg {
+      width: 99px;
+      height: 17px;
+      margin-top: 30px;
+    }
+    @include mobileMore {
+      h3 {
+        font-size: 36px;
+        letter-spacing: -1px;
+      }
+      svg {
+        width: 87px;
+        height: 15px;
+        margin-top: 37.5px;
+      }
     }
   }
 }
