@@ -611,18 +611,27 @@
 }
 
 .sec-look {
+  .inner {
+    padding-right: 160px;
+  }
   .sec-g__desc {
     font-size: 20px;
     line-height: 1.5;
+    @include tabletMore {
+      font-size: 40px;
+    }
   }
   .sec-g__cont {
     margin-top: 32px;
-    ul {
+    .sec-look__default {
       display: flex;
       flex-direction: column;
       gap: 18px;
       @include mobileMore {
         gap: 31px;
+      }
+      @include tabletMore {
+        display: none;
       }
     }
     a {
@@ -679,6 +688,11 @@
         height: 481.58px;
         margin: auto;
       }
+    }
+  }
+  @include tabletMore {
+    .sec-g__more {
+      display: none;
     }
   }
 }

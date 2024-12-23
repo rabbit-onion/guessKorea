@@ -109,6 +109,10 @@
         width: 24px;
         height: 24px;
       }
+      @include tabletMore {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }
