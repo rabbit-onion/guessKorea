@@ -255,18 +255,22 @@ svg {
     gap: 20px;
     padding: 20px 30px;
     @include mobileMore {
-      padding: 60px 3;
+      padding: 60px 30px;
       gap: 24px;
+    }
+    @include tabletMore {
+      padding: 90px 150px;
+      gap: 36px;
     }
     p:first-child {
       font-size: 10px;
+      font-weight: $font-bold;
       strong {
         font-size: 16px;
       }
       span {
         display: inline-block;
         margin: 0 3px;
-        font-weight: $font-bold;
       }
       @include tabletMore {
         font-size: 18px;
@@ -280,15 +284,48 @@ svg {
     }
     h2 {
       font-size: 28px;
+      @include tabletMore {
+        font-size: 65px;
+        letter-spacing: -1px;
+      }
     }
     h3 {
       font-size: 16px;
+      @include tabletMore {
+        font-size: 36px;
+        letter-spacing: -1px;
+        font-weight: $font-medium;
+      }
     }
     p {
       font-size: 13px;
+      @include tabletMore {
+        font-size: 20px;
+        line-height: 2;
+      }
     }
     a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 13px;
       font-size: 12px;
+      background: $primary-30;
+      width: fit-content;
+      border-radius: 35px;
+      padding: 17px 23px;
+      color: $white;
+      @include tabletMore {
+        font-size: 18px;
+        margin-top: 32px;
+      }
+      &::after {
+        content: "";
+        display: block;
+        background: url(../../../resources/images/pattern/common/arrow-right.svg) center/cover;
+        width: 11px;
+        height: 11px;
+      }
     }
   }
   @include mobileMore {
@@ -311,7 +348,6 @@ svg {
       letter-spacing: -1.5px;
     }
     svg {
-      width: 99px;
       height: 17px;
       margin-top: 30px;
     }
@@ -321,9 +357,17 @@ svg {
         letter-spacing: -1px;
       }
       svg {
-        width: 87px;
         height: 15px;
         margin-top: 37.5px;
+      }
+    }
+    @include tabletMore {
+      h3 {
+        font-size: 90px;
+      }
+      svg {
+        height: 38px;
+        margin-top: 84px;
       }
     }
   }

@@ -145,9 +145,6 @@ a:active, a:hover {
     color: #1d1d1d;
     text-decoration: none;
   }
-  a:active, a:hover {
-    text-decoration: underline;
-  }
 }
 address,
 caption,
@@ -2070,12 +2067,19 @@ svg {
 }
 @media (min-width: 600px) {
   .brand-product__txt {
-    padding: 60px 3;
+    padding: 60px 30px;
     gap: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .brand-product__txt {
+    padding: 90px 150px;
+    gap: 36px;
   }
 }
 .brand-product__txt p:first-child {
   font-size: 10px;
+  font-weight: 700;
 }
 .brand-product__txt p:first-child strong {
   font-size: 16px;
@@ -2083,7 +2087,6 @@ svg {
 .brand-product__txt p:first-child span {
   display: inline-block;
   margin: 0 3px;
-  font-weight: 700;
 }
 @media (min-width: 1024px) {
   .brand-product__txt p:first-child {
@@ -2099,14 +2102,56 @@ svg {
 .brand-product__txt h2 {
   font-size: 28px;
 }
+@media (min-width: 1024px) {
+  .brand-product__txt h2 {
+    font-size: 65px;
+    letter-spacing: -1px;
+  }
+}
 .brand-product__txt h3 {
   font-size: 16px;
+}
+@media (min-width: 1024px) {
+  .brand-product__txt h3 {
+    font-size: 36px;
+    letter-spacing: -1px;
+    font-weight: 500;
+  }
 }
 .brand-product__txt p {
   font-size: 13px;
 }
+@media (min-width: 1024px) {
+  .brand-product__txt p {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
 .brand-product__txt a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
   font-size: 12px;
+  background: #7ca6f3;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 35px;
+  padding: 17px 23px;
+  color: #fff;
+}
+@media (min-width: 1024px) {
+  .brand-product__txt a {
+    font-size: 18px;
+    margin-top: 32px;
+  }
+}
+.brand-product__txt a::after {
+  content: "";
+  display: block;
+  background: url(../../../resources/images/pattern/common/arrow-right.svg) center/cover;
+  width: 11px;
+  height: 11px;
 }
 @media (min-width: 600px) {
   .brand-product {
@@ -2131,7 +2176,6 @@ svg {
   letter-spacing: -1.5px;
 }
 .brand-end div svg {
-  width: 99px;
   height: 17px;
   margin-top: 30px;
 }
@@ -2141,8 +2185,16 @@ svg {
     letter-spacing: -1px;
   }
   .brand-end div svg {
-    width: 87px;
     height: 15px;
     margin-top: 37.5px;
+  }
+}
+@media (min-width: 1024px) {
+  .brand-end div h3 {
+    font-size: 90px;
+  }
+  .brand-end div svg {
+    height: 38px;
+    margin-top: 84px;
   }
 }/*# sourceMappingURL=styles.css.map */
