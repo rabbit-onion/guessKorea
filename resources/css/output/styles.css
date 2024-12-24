@@ -1609,6 +1609,12 @@ legend {
 .sec-look__pc-ver__info__txt span {
   font-size: 22px;
 }
+.sec-look__pc-ver__info .info-more {
+  margin-top: 93px;
+}
+.sec-look__pc-ver__info .info-more button {
+  position: static;
+}
 .sec-look__pc-ver__img {
   display: flex;
   flex-wrap: wrap;
