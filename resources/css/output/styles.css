@@ -314,6 +314,13 @@ legend {
   width: 100%;
   height: 100%;
 }
+.swiper .swiper-pagination {
+  display: flex;
+  width: 50%;
+  bottom: 5.5%;
+  left: 27px;
+  gap: 10%;
+}
 .swiper .swiper-pagination .swiper-pagination-bullet {
   background-color: rgb(68, 68, 68);
   width: 5px;
@@ -924,12 +931,6 @@ legend {
 .slide .slide-intro .intro2 picture {
   background-color: #ffedd6;
 }
-.slide .slide-intro .swiper-pagination {
-  display: flex;
-  width: 50%;
-  bottom: 5.5%;
-  left: 27px;
-}
 
 .sec-best {
   display: flex;
@@ -1177,24 +1178,6 @@ legend {
     top: 59%;
     width: 320px;
     height: 280px;
-  }
-}
-.sec-best .slide-best-info .swiper-pagination {
-  display: flex;
-  bottom: 30px;
-  left: 50%;
-  width: -moz-fit-content;
-  width: fit-content;
-  transform: translateX(-50%);
-}
-@media (min-width: 600px) {
-  .sec-best .slide-best-info .swiper-pagination {
-    bottom: 60px;
-  }
-}
-@media (min-width: 1440px) {
-  .sec-best .slide-best-info .swiper-pagination {
-    bottom: 120px;
   }
 }
 @media (min-width: 600px) {

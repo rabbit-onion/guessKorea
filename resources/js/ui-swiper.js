@@ -7,10 +7,10 @@ const lengthCircle = 2 * Math.PI * r;
 const swiperIntro = new Swiper(".slide-intro", {
   spaceBetween: 30,
   centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -40,10 +40,10 @@ const swiperBestInfo = new Swiper(".slide-best-info", {
   centeredSlides: true,
   loop: true,
   speed: 1000,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
   on: {
     autoplayTimeLeft(s, time, progress) {
       const circles = document.querySelectorAll(".progress-ring__circle");
@@ -92,10 +92,10 @@ swiperBestInfo.controller.control = swiperBestImg;
 // ====================================================
 const swiperNew = new Swiper(".slide-new", {
   slidesPerView: "auto",
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".sec-new-pagination",
     clickable: true,
@@ -109,10 +109,10 @@ const swiperNew = new Swiper(".slide-new", {
 const swiperBranding = new Swiper(".slide-branding", {
   spaceBetween: 30,
   centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -157,51 +157,3 @@ swiperList.forEach((item) => {
     }
   });
 });
-
-// playPauseButton.addEventListener("click", function () {
-//   const span = this.querySelector("span");
-//   playPauseButton.classList.toggle("clicked");
-//   playPauseButton.classList.toggle("default");
-//   swiperList.map((item) => {
-//     if (item.autoplay.running) {
-//       item.autoplay.stop();
-//       swiperWrapper.setAttribute("aria-live", "polite");
-//       this.setAttribute("aria-label", "슬라이드 쇼 재생");
-
-//       if (span) {
-//         span.textContent = "재생";
-//       }
-//     } else {
-//       item.autoplay.start();
-//       swiperWrapper.setAttribute("aria-live", "off");
-//       this.setAttribute("aria-label", "슬라이드 쇼 정지");
-
-//       if (span) {
-//         span.textContent = "정지";
-//       }
-//     }
-//   });
-// });
-
-// playPauseButton.addEventListener("click", function () {
-//   const span = this.querySelector("span");
-//   playPauseButton.classList.toggle("clicked");
-//   playPauseButton.classList.toggle("default");
-//   if (swiperIntro.autoplay.running) {
-//     swiperIntro.autoplay.stop();
-//     swiperWrapper.setAttribute("aria-live", "polite");
-//     this.setAttribute("aria-label", "슬라이드 쇼 재생");
-
-//     if (span) {
-//       span.textContent = "재생";
-//     }
-//   } else {
-//     swiperIntro.autoplay.start();
-//     swiperWrapper.setAttribute("aria-live", "off");
-//     this.setAttribute("aria-label", "슬라이드 쇼 정지");
-
-//     if (span) {
-//       span.textContent = "정지";
-//     }
-//   }
-// });
