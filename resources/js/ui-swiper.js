@@ -29,10 +29,10 @@ const swiperBestImg = new Swiper(".slide-best-img", {
   fadeEffect: {
     crossFade: true,
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
   secName: "sec-best",
 });
 
