@@ -84,34 +84,30 @@
     }
   }
   &__more {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    top: 5%;
-    right: $p-mobile;
-    font-size: 2rem;
-    text-indent: -9999px;
-    overflow: hidden;
-    @include mobileMore {
-      right: $p-tablet;
-    }
-    &::after {
-      content: "\f061";
+    display: none;
+    @include tabletMore {
       display: flex;
-      justify-content: center;
       align-items: center;
-      width: 20px;
-      height: 20px;
-      background: url(../../../resources/images/pattern/common/more.svg) center/cover;
-      border-radius: 50%;
-      @include mobileMore {
+      gap: 10px;
+      position: absolute;
+      top: 5%;
+      right: $p-tablet;
+      font-size: 2rem;
+      text-indent: -9999px;
+      overflow: hidden;
+      &::after {
+        content: "\f061";
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 24px;
         height: 24px;
-      }
-      @include tabletMore {
-        width: 40px;
-        height: 40px;
+        background: url(../../../resources/images/pattern/common/more.svg) center/cover;
+        border-radius: 50%;
+        @include desktop {
+          width: 40px;
+          height: 40px;
+        }
       }
     }
   }
