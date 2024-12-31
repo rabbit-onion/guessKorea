@@ -6,6 +6,22 @@
 // 전역 스타일
 .swiper-button-play-pause {
   z-index: 100;
+  &.default::before {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url(../../../resources/images/pattern/common/pause.svg) no-repeat center center;
+    background-size: contain;
+  }
+  &.clicked::before {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url(../../../resources/images/pattern/common/play_arrow.svg) no-repeat center center;
+    background-size: contain;
+  }
 }
 
 .swiper {
@@ -47,16 +63,8 @@
   }
 
   .swiper-pagination {
-    position: absolute;
-    bottom: 10px;
-    z-index: 10;
-    display: block;
-    opacity: 1;
-    // display: flex;
-    // width: 50%;
-    // bottom: 5.5%;
-    // left: 27px;
-    // gap: 10%;
+    display: flex;
+    gap: 20px;
     .swiper-pagination-bullet {
       background-color: rgb(68, 68, 68);
       width: 5px;

@@ -15,24 +15,6 @@
     position: absolute;
     bottom: 4.4%;
     left: 55%;
-    &.default::before {
-      display: block;
-      content: "\f04c";
-      width: 20px;
-      height: 20px;
-      font-family: "Line Awesome Free";
-      font-weight: 900;
-      color: $white;
-    }
-    &.clicked::before {
-      content: "\f04b";
-      display: block;
-      width: 20px;
-      height: 20px;
-      font-family: "Line Awesome Free";
-      font-weight: 900;
-      color: $white;
-    }
     span {
       @include sr-only;
     }
@@ -154,26 +136,8 @@
     width: 100%;
     .swiper-button-play-pause {
       position: absolute;
-      bottom: 2.5%;
-      left: 67%;
-      &.default::before {
-        display: block;
-        content: "\f04c";
-        width: 20px;
-        height: 20px;
-        font-family: "Line Awesome Free";
-        font-weight: 900;
-        color: $black;
-      }
-      &.clicked::before {
-        content: "\f04b";
-        display: block;
-        width: 20px;
-        height: 20px;
-        font-family: "Line Awesome Free";
-        font-weight: 900;
-        color: $black;
-      }
+      bottom: 23px;
+      left: 280px;
       span {
         @include sr-only;
       }
@@ -355,19 +319,12 @@
         }
       }
     }
-    // .swiper-pagination {
-    //   display: flex;
-    //   bottom: 30px;
-    //   left: 50%;
-    //   width: fit-content;
-    //   transform: translateX(calc(-50% - 20px));
-    //   @include mobileMore {
-    //     bottom: 60px;
-    //   }
-    //   @include desktop {
-    //     bottom: 120px;
-    //   }
-    // }
+    .swiper-pagination {
+      justify-content: center;
+      position: absolute;
+      bottom: 30px;
+      left: -20px;
+    }
   }
   @include mobileMore {
     .sec-g__cont {
@@ -400,26 +357,8 @@
     }
     .swiper-button-play-pause {
       position: absolute;
-      bottom: -0.8%;
-      left: 44%;
-      &.default::before {
-        display: block;
-        content: "\f04c";
-        width: 20px;
-        height: 20px;
-        font-family: "Line Awesome Free";
-        font-weight: 900;
-        color: $black;
-      }
-      &.clicked::before {
-        content: "\f04b";
-        display: block;
-        width: 20px;
-        height: 20px;
-        font-family: "Line Awesome Free";
-        font-weight: 900;
-        color: $black;
-      }
+      bottom: -2px;
+      left: 220px;
       span {
         @include sr-only;
       }
@@ -577,21 +516,24 @@
       }
     }
   }
-  // .swiper-pagination {
-  //   position: static;
-  //   width: fit-content;
-  //   padding-left: 10px;
-  //   padding-top: 60px;
-  //   @include desktop {
-  //     padding-top: 120px;
-  //     padding-left: 15px;
-  //   }
-  // }
+  .swiper-pagination {
+    position: static;
+    align-items: flex-end;
+    height: 45px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    @include desktop {
+      // padding-top: 120px;
+      // padding-left: 15px;
+    }
+  }
 }
 
 .sec-look {
-  .inner {
-    padding-right: 160px;
+  @include tabletMore {
+    .inner {
+      padding-right: 160px;
+    }
   }
   .sec-g__desc {
     font-size: 20px;
@@ -680,7 +622,7 @@
     }
   }
   &__pc-ver {
-    display: flex;
+    display: none;
     gap: 10%;
     &__info {
       width: 110%;
@@ -757,6 +699,9 @@
           object-fit: cover;
         }
       }
+    }
+    @include tabletMore {
+      display: flex;
     }
   }
 }
