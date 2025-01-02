@@ -1480,6 +1480,9 @@ legend {
     display: none;
   }
 }
+.sec-look .sec-g__cont .sec-look__default li {
+  opacity: 0.5;
+}
 .sec-look .sec-g__cont .sec-look__default a {
   display: flex;
   width: 100%;

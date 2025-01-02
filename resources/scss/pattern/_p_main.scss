@@ -583,6 +583,9 @@
       @include tabletMore {
         display: none;
       }
+      li {
+        opacity: 0.5;
+      }
       a {
         display: flex;
         width: 100%;

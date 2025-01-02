@@ -32,3 +32,61 @@
 //     },
 //   });
 // });
+
+// main - lookbook section animation
+// ====================================================
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // section.sec-g 제목 고정
+  gsap.to(".sec-look .sec-g__tit", {
+    zIndex: 1000,
+    scrollTrigger: {
+      trigger: ".sec-look",
+      start: "top top",
+      end: "bottom top",
+      pin: true,
+      pinSpacing: false,
+      markers: true,
+    },
+  });
+
+  const imgs = document.querySelector(".sec-look__default");
+
+  // section.sec-cont 애니메이션
+  gsap.to(".sec-look .sec-g__cont", {
+    opacity: 1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".sec-look .sec-g__cont",
+      start: "top 80%", // 컨텐츠가 화면의 80% 지점에 들어왔을 때 시작
+      end: () => "+=" + (imgs.scrollHeight + window.innerHeight / 4),
+      toggleActions: "play none none none",
+    },
+  });
+
+  // .sec-look__default__img 오버레이 효과
+  const activeEffect = document.querySelectorAll(".sec-look__default__img");
+
+  activeEffect.forEach((img) => {
+    const active = document.createElement("div");
+    active.className = "scorll-active";
+    img.appendChild(active);
+
+    // 애니메이션 정의
+    gsap.fromTo(
+      active,
+      { opacity: 0.5 }, // 초기 상태
+      {
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: img,
+          start: "top 90%", // 이미지가 화면의 90% 지점에 들어왔을 때
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  });
+});
