@@ -108,17 +108,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 0.8em;
     font-size: 14px;
-    padding: 8px 11px 8px 14px;
+    padding: 1.1em 1.2em 1.1em calc(1.2em + 3px);
     border: 1px solid $black;
-    border-radius: 18px;
+    border-radius: 2em;
     &::after {
       display: block;
       content: "";
-      width: 10px;
-      height: 10px;
-      background: url(../../../resources/images/pattern/common/arrow-right-black.svg) no-repeat 0 0;
+      width: 0.8em;
+      height: 0.8em;
+      background: url(../../../resources/images/pattern/common/arrow-right-black.svg) no-repeat bottom center;
     }
   }
 }

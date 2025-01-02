@@ -302,15 +302,13 @@
             button {
               position: static;
               background: rgba(255, 255, 255, 0.7);
-              border-radius: 32px;
             }
           }
           @include desktop {
             top: 57%;
             left: 50%;
             button {
-              width: 217px;
-              height: 59px;
+              font-size: 20px;
             }
           }
         }
@@ -381,6 +379,9 @@
       }
       @include mobileMore {
         left: 240px;
+      }
+      @include desktop {
+        left: 364px;
       }
     }
     .new-overlay {
@@ -648,7 +649,7 @@
     display: none;
     gap: 84px;
     &__info {
-      width: 110%;
+      width: 90%;
       &__window {
         width: 100%;
         a {
@@ -660,19 +661,24 @@
             height: 100%;
             object-fit: cover;
           }
-          .info-more {
-            margin-top: 93px;
-            button {
-              position: static;
-              font-size: 18px;
-              border-radius: 30px;
-              padding: 17px 15px 17px 20px;
-              gap: 12px;
-              &::after {
-                width: 13px;
-                height: 13px;
-              }
-            }
+        }
+        .info-more {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 93px;
+          font-size: 18px;
+          border: 1px solid #000;
+          border-radius: 2em;
+          gap: 0.6em;
+          width: fit-content;
+          padding: 0.8em 1em 0.8em calc(1em + 3px);
+          &::after {
+            display: block;
+            content: "";
+            width: 13px;
+            height: 13px;
+            background: url(../../../resources/images/pattern/common/arrow-right-black.svg) no-repeat center center;
           }
         }
       }
@@ -686,25 +692,13 @@
           @include desktop {
             font-size: 32px;
             letter-spacing: -1px;
+            line-height: 1.1;
           }
         }
         span {
           font-size: 16px;
           @include desktop {
             font-size: 22px;
-          }
-        }
-      }
-      .info-more {
-        margin-top: 60px;
-        button {
-          position: static;
-          font-size: 12px;
-        }
-        @include desktop {
-          margin-top: 93px;
-          button {
-            font-size: 14px;
           }
         }
       }
@@ -781,6 +775,10 @@
         left: auto;
         right: 45px;
       }
+      @include desktop {
+        right: 65px;
+        bottom: 90px;
+      }
     }
   }
   .overlay {
@@ -832,7 +830,6 @@
           border-color: $white;
           color: $white;
           letter-spacing: -0.5px;
-          gap: 10px;
           &::after {
             background: url(../../../resources/images/pattern/common/arrow-right.svg) no-repeat 0 0;
           }
@@ -864,15 +861,8 @@
         margin-top: 40px;
         button {
           position: static;
-          // border-color: $white;
-          border-radius: 23px;
-          // color: $white;
-          // letter-spacing: -1.5px;
-          // gap: 10px;
           font-size: 18px;
-          padding: 10px 11px 10px 19px;
           &::after {
-            // background: url(../../../resources/images/pattern/common/arrow-right.svg) no-repeat 0 0;
             width: 13px;
             height: 13px;
           }

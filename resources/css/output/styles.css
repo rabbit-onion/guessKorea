@@ -378,18 +378,18 @@ legend {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 0.8em;
   font-size: 14px;
-  padding: 8px 11px 8px 14px;
+  padding: 1.1em 1.2em 1.1em calc(1.2em + 3px);
   border: 1px solid #000;
-  border-radius: 18px;
+  border-radius: 2em;
 }
 .info-more button::after {
   display: block;
   content: "";
-  width: 10px;
-  height: 10px;
-  background: url(../../../resources/images/pattern/common/arrow-right-black.svg) no-repeat 0 0;
+  width: 0.8em;
+  height: 0.8em;
+  background: url(../../../resources/images/pattern/common/arrow-right-black.svg) no-repeat bottom center;
 }
 
 .inner {
@@ -491,7 +491,7 @@ legend {
 }
 @media (min-width: 1440px) {
   .sec-g__tit h2 {
-    font-size: 64px;
+    font-size: 62px;
   }
 }
 .sec-g__more {
@@ -1144,7 +1144,6 @@ legend {
   .sec-best .slide-best-info .swiper-wrapper .best-info-txt-box .best-info-more button {
     position: static;
     background: rgba(255, 255, 255, 0.7);
-    border-radius: 32px;
   }
 }
 @media (min-width: 1440px) {
@@ -1153,8 +1152,7 @@ legend {
     left: 50%;
   }
   .sec-best .slide-best-info .swiper-wrapper .best-info-txt-box .best-info-more button {
-    width: 217px;
-    height: 59px;
+    font-size: 20px;
   }
 }
 .sec-best .slide-best-info .swiper-wrapper img {
@@ -1243,6 +1241,11 @@ legend {
 @media (min-width: 600px) {
   .sec-new .sec-g__cont .swiper-button-play-pause {
     left: 240px;
+  }
+}
+@media (min-width: 1440px) {
+  .sec-new .sec-g__cont .swiper-button-play-pause {
+    left: 364px;
   }
 }
 .sec-new .sec-g__cont .new-overlay .swiper-wrapper {
@@ -1548,7 +1551,7 @@ legend {
   gap: 84px;
 }
 .sec-look__pc-ver__info {
-  width: 110%;
+  width: 90%;
 }
 .sec-look__pc-ver__info__window {
   width: 100%;
@@ -1564,19 +1567,25 @@ legend {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.sec-look__pc-ver__info__window a .info-more {
+.sec-look__pc-ver__info__window .info-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 93px;
-}
-.sec-look__pc-ver__info__window a .info-more button {
-  position: static;
   font-size: 18px;
-  border-radius: 30px;
-  padding: 17px 15px 17px 20px;
-  gap: 12px;
+  border: 1px solid #000;
+  border-radius: 2em;
+  gap: 0.6em;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.8em 1em 0.8em calc(1em + 3px);
 }
-.sec-look__pc-ver__info__window a .info-more button::after {
+.sec-look__pc-ver__info__window .info-more::after {
+  display: block;
+  content: "";
   width: 13px;
   height: 13px;
+  background: url(../../../resources/images/pattern/common/arrow-right-black.svg) no-repeat center center;
 }
 .sec-look__pc-ver__info__txt {
   display: flex;
@@ -1591,6 +1600,7 @@ legend {
   .sec-look__pc-ver__info__txt strong {
     font-size: 32px;
     letter-spacing: -1px;
+    line-height: 1.1;
   }
 }
 .sec-look__pc-ver__info__txt span {
@@ -1599,21 +1609,6 @@ legend {
 @media (min-width: 1440px) {
   .sec-look__pc-ver__info__txt span {
     font-size: 22px;
-  }
-}
-.sec-look__pc-ver__info .info-more {
-  margin-top: 60px;
-}
-.sec-look__pc-ver__info .info-more button {
-  position: static;
-  font-size: 12px;
-}
-@media (min-width: 1440px) {
-  .sec-look__pc-ver__info .info-more {
-    margin-top: 93px;
-  }
-  .sec-look__pc-ver__info .info-more button {
-    font-size: 14px;
   }
 }
 .sec-look__pc-ver__img {
@@ -1716,6 +1711,12 @@ legend {
     right: 45px;
   }
 }
+@media (min-width: 1440px) {
+  .sec-branding .sec-g__cont .swiper-button-play-pause {
+    right: 65px;
+    bottom: 90px;
+  }
+}
 .sec-branding .overlay {
   width: 100%;
   height: auto;
@@ -1768,7 +1769,6 @@ legend {
     border-color: #fff;
     color: #fff;
     letter-spacing: -0.5px;
-    gap: 10px;
   }
   .sec-branding .branding-txt .info-more button::after {
     background: url(../../../resources/images/pattern/common/arrow-right.svg) no-repeat 0 0;
@@ -1803,9 +1803,7 @@ legend {
   }
   .sec-branding .branding-txt .info-more button {
     position: static;
-    border-radius: 23px;
     font-size: 18px;
-    padding: 10px 11px 10px 19px;
   }
   .sec-branding .branding-txt .info-more button::after {
     width: 13px;
